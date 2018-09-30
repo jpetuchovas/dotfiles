@@ -1,6 +1,9 @@
 [core]
   excludesfile = ~/.gitignore_global
 
+[github]
+  user = jpetuchovas
+
 [user]
   name = Justinas Petuchovas
   useConfigOnly = true
