@@ -8,3 +8,5 @@
 - link:
     ~/.bashrc:
     ~/.dotfiles: ''
+    ~/.gitconfig:
+    ~/.gitignore_global:

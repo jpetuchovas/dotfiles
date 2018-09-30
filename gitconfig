@@ -1,0 +1,6 @@
+[core]
+  excludesfile = ~/.gitignore_global
+
+[user]
+  name = Justinas Petuchovas
+  useConfigOnly = true
