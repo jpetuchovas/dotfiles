@@ -1,2 +1,8 @@
 # Compiled source
 *.pyc
+
+# Editors
+.vscode
+
+# Code analysis
+.mypy_cache
