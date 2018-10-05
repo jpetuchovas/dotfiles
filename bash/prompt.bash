@@ -1,8 +1,7 @@
-ATTRIBUTE_BOLD='\[\e[1m\]'
 ATTRIBUTE_RESET='\[\e[0m\]'
 
-COLOR_BLUE='\[\e[01;34m\]'
-COLOR_GRAY='\[\e[37m\]'
+COLOR_BLUE='\[\e[34m\]'
+COLOR_GRAY='\[\e[90m\]'
 COLOR_YELLOW='\[\e[33m\]'
 COLOR_RED='\[\e[31m\]'
 
@@ -30,4 +29,4 @@ check_if_dirty() {
 PROMPT_COMMAND="find_git_branch; check_if_dirty; ${PROMPT_COMMAND}"
 
 PROMPT_DIRTRIM=3
-PS1="${TERMINAL_TITLE_BAR}${ATTRIBUTE_BOLD}${COLOR_BLUE}\w${ATTRIBUTE_RESET}${COLOR_YELLOW}\$git_branch${COLOR_RED}\$git_dirty${COLOR_GRAY}\$ ${ATTRIBUTE_RESET}"
+PS1="${TERMINAL_TITLE_BAR}${COLOR_BLUE}\w${COLOR_YELLOW}\$git_branch${COLOR_RED}\$git_dirty${COLOR_GRAY}\$ ${ATTRIBUTE_RESET}"
