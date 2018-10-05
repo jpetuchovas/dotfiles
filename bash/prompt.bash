@@ -8,10 +8,10 @@ COLOR_RED='\[\e[31m\]'
 TERMINAL_TITLE_BAR='\[\e]0;\u@\h: \w\a\]'
 
 find_git_branch() {
-  local branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/')
+  local branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 
   if [ ! -z $branch ]; then
-    git_branch="${branch}"
+    git_branch=" ${branch}"
   else
     git_branch=''
   fi
