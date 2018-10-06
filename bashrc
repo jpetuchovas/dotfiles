@@ -1,14 +1,12 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-# If not running interactively, don't do anything
+# If not running interactively, don't do anything.
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+  *) return;;
 esac
 
 source ~/.bash/settings.bash
+
+source ~/.shell/external.sh
 
 source ~/.shell/aliases.sh
 
@@ -30,9 +28,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# added by Anaconda3 installer
-export PATH="/home/justinas/anaconda3/bin:$PATH"
-
-export SPARK_HOME=~/spark-2.3.1-bin-hadoop2.7
-export PYSPARK_PYTHON=~/anaconda3/bin/python
