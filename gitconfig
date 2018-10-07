@@ -1,5 +1,17 @@
+[advice]
+  statusHints = false
+
+[alias]
+  glog = log --graph --format=line # graphical log
+  stash-all = stash --all
+  update-submodules = submodule update --init --recursive
+  upgrade-submodules = submodule update --init --remote
+
 [core]
   excludesfile = ~/.gitignore_global
+
+[pretty]
+  line = %Cred%h%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen%ar
 
 [user]
   name = Justinas Petuchovas
