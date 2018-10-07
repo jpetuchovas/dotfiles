@@ -1,0 +1,8 @@
+set autoindent
+set historylog
+set linenumbers
+set morespace
+set nowrap
+set smooth
+set tabsize 2
+set tabstospaces

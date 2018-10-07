@@ -11,4 +11,5 @@
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:
+    ~/.nanorc:
     ~/.shell:
