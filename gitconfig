@@ -2,6 +2,8 @@
   statusHints = false
 
 [alias]
+  co = checkout
+  cb = checkout -b
   glog = log --graph --format=line # graphical log
   st = status --short --branch
   stash-all = stash --all
