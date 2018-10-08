@@ -5,6 +5,7 @@
   co = checkout
   cb = checkout -b
   glog = log --graph --format=line # graphical log
+  prune-remotes = remote prune origin
   st = status --short --branch
   stash-all = stash --all
   # Undo last commit.
