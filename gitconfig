@@ -20,7 +20,7 @@
   line = %Cred%h%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen%ar
 
 [push]
-  default = upstream
+  default = current
 
 [user]
   name = Justinas Petuchovas
