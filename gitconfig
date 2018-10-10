@@ -4,7 +4,9 @@
 [alias]
   co = checkout
   cb = checkout -b
+  cm = commit -m
   glog = log --graph --format=line # graphical log
+  it = !git init && git commit --allow-empty -m 'Initialize project'
   prune-remotes = remote prune origin
   st = status --short --branch
   stash-all = stash --all
@@ -21,6 +23,7 @@
 
 [push]
   default = current
+  followTags = true
 
 [user]
   name = Justinas Petuchovas
