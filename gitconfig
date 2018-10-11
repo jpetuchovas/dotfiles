@@ -26,6 +26,9 @@
   default = current
   followTags = true
 
+[transfer]
+  fsckObjects = true
+
 [user]
   name = Justinas Petuchovas
   useConfigOnly = true
