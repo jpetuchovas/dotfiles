@@ -2,6 +2,7 @@
   statusHints = false
 
 [alias]
+  aa = add --all
   co = checkout
   cb = checkout -b
   cm = commit -m
