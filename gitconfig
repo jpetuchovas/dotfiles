@@ -3,6 +3,7 @@
 
 [alias]
   aa = add --all
+  brdel = branch -D
   co = checkout
   cb = checkout -b
   cm = commit -m
