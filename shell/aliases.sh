@@ -3,7 +3,6 @@ alias grep='grep --color=auto'
 
 alias ll='ls --all --human-readable -l'
 alias la='ls --almost-all'
-alias l='ls'
 
 # Add an "alert" alias for long running commands.  Use like so:
 # sleep 10; alert
