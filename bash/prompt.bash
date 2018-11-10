@@ -31,3 +31,13 @@ PROMPT_COMMAND="find_git_branch; check_if_dirty; ${PROMPT_COMMAND}"
 PROMPT_DIRTRIM=3
 PS1="${TERMINAL_TITLE_BAR}${COLOR_BLUE}\w${COLOR_YELLOW}\$git_branch${COLOR_RED}\$git_dirty${COLOR_GRAY}\$${ATTRIBUTE_RESET} "
 PS2="${COLOR_GRAY}>${ATTRIBUTE_RESET} "
+
+# Conda virtual environment indicator.
+show_virtual_environment() {
+  if [ -n "$CONDA_DEFAULT_ENV" ]; then
+    echo "($(basename $CONDA_DEFAULT_ENV)) "
+  fi
+}
+
+export -f show_virtual_environment
+PS1='$(show_virtual_environment)'$PS1

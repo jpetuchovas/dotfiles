@@ -10,6 +10,7 @@
     ~/.bash_profile:
     ~/.bashrc:
       force: true
+    ~/.direnvrc:
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:

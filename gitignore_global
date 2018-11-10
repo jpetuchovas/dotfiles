@@ -6,3 +6,7 @@
 
 # Code analysis
 .mypy_cache
+
+# direnv
+.direnv
+.envrc
