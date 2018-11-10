@@ -10,6 +10,8 @@
     ~/.bash_profile:
     ~/.bashrc:
       force: true
+    ~/.condarc:
+      force: true
     ~/.direnvrc:
     ~/.dotfiles: ''
     ~/.gitconfig:
