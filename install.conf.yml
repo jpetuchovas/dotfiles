@@ -17,6 +17,7 @@
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.inputrc:
+    ~/.isort.cfg:
     ~/.nanorc:
     ~/.psqlrc:
     ~/.shell:

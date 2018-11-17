@@ -1,5 +1,6 @@
 changeps1: false
 create_default_packages:
   - black
+  - isort
   - mypy
   - pylint
