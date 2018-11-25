@@ -18,6 +18,7 @@
     ~/.gitignore_global:
     ~/.inputrc:
     ~/.isort.cfg:
+    ~/.mypy.ini:
     ~/.nanorc:
     ~/.psqlrc:
     ~/.shell:
