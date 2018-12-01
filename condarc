@@ -4,7 +4,7 @@ channels:
   - defaults
 create_default_packages:
   - black
+  - flake8
   - isort
   - mypy
   - pre_commit
-  - pylint

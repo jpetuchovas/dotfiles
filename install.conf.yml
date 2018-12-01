@@ -3,7 +3,7 @@
       create: true
       relink: true
 
-- clean: ['~']
+- clean: ['~', '~/.config']
 
 - link:
     ~/.bash:
@@ -12,6 +12,8 @@
       force: true
     ~/.condarc:
       force: true
+    ~/.config/flake8:
+      path: config/flake8
     ~/.direnvrc:
     ~/.dotfiles: ''
     ~/.gitconfig:
