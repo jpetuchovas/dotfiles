@@ -1,0 +1,2 @@
+[pydocstyle]
+  select = D1, D200, D201, D202, D204, D209, D211, D212, D300, D301, D402, D403, D404

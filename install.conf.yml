@@ -23,4 +23,5 @@
     ~/.mypy.ini:
     ~/.nanorc:
     ~/.psqlrc:
+    ~/.pydocstylerc:
     ~/.shell:

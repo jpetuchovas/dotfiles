@@ -8,3 +8,4 @@ create_default_packages:
   - isort
   - mypy
   - pre_commit
+  - pydocstyle
