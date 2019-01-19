@@ -18,6 +18,8 @@
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:
+    ~/.gnupg/gpg-agent.conf:
+      path: gnupg/gpg-agent.conf
     ~/.inputrc:
     ~/.isort.cfg:
     ~/.mypy.ini:
