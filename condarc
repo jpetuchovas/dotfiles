@@ -7,5 +7,6 @@ create_default_packages:
   - flake8
   - isort
   - mypy
+  - mypy_extensions
   - pre_commit
   - pydocstyle
