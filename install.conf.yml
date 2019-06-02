@@ -8,6 +8,7 @@
 - link:
     ~/.bash:
     ~/.bash_profile:
+      force: true
     ~/.bashrc:
       force: true
     ~/.condarc:
@@ -20,6 +21,7 @@
     ~/.gitignore_global:
     ~/.gnupg/gpg-agent.conf:
       path: gnupg/gpg-agent.conf
+      force: true
     ~/.inputrc:
     ~/.isort.cfg:
     ~/.mypy.ini:
