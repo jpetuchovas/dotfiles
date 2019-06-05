@@ -11,3 +11,4 @@ create_default_packages:
   - mypy_extensions
   - pre_commit
   - pydocstyle
+ssl_verify: true
