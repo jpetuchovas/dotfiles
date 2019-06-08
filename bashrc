@@ -6,6 +6,8 @@ esac
 
 source ~/.bash/settings.bash
 
+source ~/.shell/scripts.sh
+
 source ~/.shell/external.sh
 
 source ~/.shell/aliases.sh
