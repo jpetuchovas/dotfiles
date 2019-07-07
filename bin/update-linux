@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-sudo apt update
-sudo apt upgrade
-
-sudo snap refresh
-
-conda update --name base --channel defaults conda
-conda update --name base --channel defaults anaconda

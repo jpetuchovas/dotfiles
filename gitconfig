@@ -14,9 +14,6 @@
   update-submodules = submodule update --init --recursive
   upgrade-submodules = submodule update --init --remote
 
-[commit]
-  gpgsign = true
-
 [core]
   excludesfile = ~/.gitignore_global
 

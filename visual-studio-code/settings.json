@@ -1,0 +1,51 @@
+{
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.zeroUnits": "warning",
+  "debug.inlineValues": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "explorer.autoReveal": false,
+  "explorer.openEditors.visible": 0,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "html.format.endWithNewline": true,
+  "html.format.indentInnerHtml": true,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "less.lint.duplicateProperties": "warning",
+  "less.lint.zeroUnits": "warning",
+  "scss.lint.duplicateProperties": "warning",
+  "scss.lint.zeroUnits": "warning",
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "terminal.integrated.macOptionIsMeta": true,
+  "window.restoreWindows": "all",
+  "workbench.startupEditor": "none",
+  "[javascript]": {
+    "editor.formatOnSave": true,
+  },
+  "[markdown]": {
+    "editor.rulers": []
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
+    "editor.rulers": [72, 88],
+    "editor.tabSize": 4
+  },
+  // Extension settings
+  "python.formatting.provider": "black",
+  "python.jediEnabled": false,
+  "python.linting.banditEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pydocstyleEnabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.terminal.activateEnvironment": false
+}
