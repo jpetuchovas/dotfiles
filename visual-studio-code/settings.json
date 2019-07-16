@@ -8,6 +8,7 @@
   "editor.cursorStyle": "block",
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
+  "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "explorer.autoReveal": false,
   "explorer.openEditors.visible": 0,
@@ -32,20 +33,12 @@
     "editor.rulers": []
   },
   "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    "editor.formatOnSave": true,
     "editor.rulers": [72, 88],
     "editor.tabSize": 4
   },
   // Extension settings
   "python.formatting.provider": "black",
   "python.jediEnabled": false,
-  "python.linting.banditEnabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.pydocstyleEnabled": true,
-  "python.linting.pylintEnabled": false,
-  "python.terminal.activateEnvironment": false
+  "python.terminal.activateEnvironment": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
