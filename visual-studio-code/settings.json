@@ -40,5 +40,6 @@
   "python.formatting.provider": "black",
   "python.jediEnabled": false,
   "python.terminal.activateEnvironment": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.iconTheme": "vscode-icons"
 }
