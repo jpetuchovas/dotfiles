@@ -6,3 +6,5 @@ export NVM_DIR="${HOME}/.nvm"
 
 alias node='unalias node; unalias npm; nvm use default; node $@'
 alias npm='unalias node; unalias npm; nvm use default; npm $@'
+
+export PATH="${HOME}/tools/arcanist/bin:${PATH}"
