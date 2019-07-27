@@ -22,6 +22,8 @@
     ~/.psqlrc:
     ~/.pydocstylerc:
     ~/.shell:
+    ~/.ssh/config:
+      path: ssh/config
     ~/.vscode-extensions:
       path: visual-studio-code/extensions
     ~/Library/Application Support/Code/User/keybindings.json:
