@@ -16,3 +16,9 @@ fi
 if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# Arcanist’s tab completion
+ARCANIST_PREFIX="${HOME}/tools/arcanist"
+if [[ -d $ARCANIST_PREFIX ]]; then
+  source "${ARCANIST_PREFIX}/resources/shell/bash-completion"
+fi
