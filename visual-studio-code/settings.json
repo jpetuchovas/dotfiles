@@ -26,9 +26,6 @@
   "terminal.integrated.macOptionIsMeta": true,
   "window.restoreWindows": "all",
   "workbench.startupEditor": "none",
-  "[javascript]": {
-    "editor.formatOnSave": true,
-  },
   "[markdown]": {
     "editor.rulers": []
   },
