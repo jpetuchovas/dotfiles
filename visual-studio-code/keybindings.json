@@ -1,5 +1,15 @@
 [
   {
+    "key": "ctrl+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "ctrl+shift+q",
     "command": "workbench.action.toggleMaximizedPanel"
   }
