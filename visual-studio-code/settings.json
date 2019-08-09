@@ -26,6 +26,7 @@
   "telemetry.enableCrashReporter": false,
   "terminal.integrated.macOptionIsMeta": true,
   "window.restoreWindows": "all",
+  "window.zoomLevel": 0,
   "workbench.startupEditor": "none",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
