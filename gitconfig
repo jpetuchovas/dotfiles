@@ -20,10 +20,6 @@
 [pretty]
   line = %Cred%h%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen%ar
 
-[push]
-  default = current
-  followTags = true
-
 [transfer]
   fsckObjects = true
 
