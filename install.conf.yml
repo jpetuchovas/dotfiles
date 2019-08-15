@@ -32,6 +32,9 @@
     ~/Library/Application Support/Code/User/settings.json:
       force: true
       path: visual-studio-code/settings.json
+    ~/Library/Application Support/Code/User/snippets:
+      force: true
+      path: visual-studio-code/snippets
 
 - shell:
   - chmod -R +x ~/bin
