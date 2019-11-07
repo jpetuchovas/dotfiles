@@ -27,7 +27,6 @@
   "terminal.integrated.macOptionIsMeta": true,
   "window.restoreWindows": "all",
   "window.zoomLevel": 0,
-  "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
   "[jsonc]": {
