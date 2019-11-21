@@ -43,6 +43,7 @@
   "python.formatting.provider": "black",
   "python.jediEnabled": false,
   "python.terminal.activateEnvironment": false,
+  "vim.useCtrlKeys": false,
   "vsicons.dontShowNewVersionMessage": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
