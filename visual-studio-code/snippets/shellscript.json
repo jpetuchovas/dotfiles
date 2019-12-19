@@ -1,7 +1,7 @@
 {
   "shebang": {
-    "prefix": "shebang",
+    "prefix": "shebang-line",
     "body": "#!/usr/bin/env bash",
-    "description": "Add a Bash script’s shebang"
+    "description": "Add a bash script’s shebang line"
   }
 }
