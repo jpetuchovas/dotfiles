@@ -48,5 +48,9 @@
     "mutantdino.resourcemonitor",
     "ryu1kn.text-marker"
   ],
+  "remote.SSH.defaultExtensions": [
+    "mutantdino.resourcemonitor",
+    "ryu1kn.text-marker"
+  ],
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
