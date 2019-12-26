@@ -44,5 +44,9 @@
   "python.jediEnabled": false,
   "python.terminal.activateEnvironment": false,
   "vsicons.dontShowNewVersionMessage": true,
+  "remote.containers.defaultExtensions": [
+    "mutantdino.resourcemonitor",
+    "ryu1kn.text-marker"
+  ],
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
