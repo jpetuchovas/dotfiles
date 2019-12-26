@@ -1,40 +1,40 @@
 - defaults:
-  link:
-    create: true
-    relink: true
+    link:
+      create: true
+      relink: true
 
 - clean: ['~', '~/.config']
 
 - link:
-  ~/.bash:
-  ~/.bash_profile:
-  ~/.bashrc:
-  ~/bin:
-  ~/.config/flake8:
-    path: config/flake8
-  ~/.dotfiles: ''
-  ~/.gitconfig:
-  ~/.gitignore_global:
-  ~/.inputrc:
-  ~/.isort.cfg:
-  ~/.mypy.ini:
-  ~/.nanorc:
-  ~/.psqlrc:
-  ~/.pydocstylerc:
-  ~/.shell:
-  ~/.ssh/config:
-    path: ssh/config
-  ~/.vscode-extensions:
-    path: visual-studio-code/extensions
-  ~/Library/Application Support/Code/User/keybindings.json:
-    force: true
-    path: visual-studio-code/keybindings.json
-  ~/Library/Application Support/Code/User/settings.json:
-    force: true
-    path: visual-studio-code/settings.json
-  ~/Library/Application Support/Code/User/snippets:
-    force: true
-    path: visual-studio-code/snippets
+    ~/.bash:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/bin:
+    ~/.config/flake8:
+      path: config/flake8
+    ~/.dotfiles: ''
+    ~/.gitconfig:
+    ~/.gitignore_global:
+    ~/.inputrc:
+    ~/.isort.cfg:
+    ~/.mypy.ini:
+    ~/.nanorc:
+    ~/.psqlrc:
+    ~/.pydocstylerc:
+    ~/.shell:
+    ~/.ssh/config:
+      path: ssh/config
+    ~/.vscode-extensions:
+      path: visual-studio-code/extensions
+    ~/Library/Application Support/Code/User/keybindings.json:
+      force: true
+      path: visual-studio-code/keybindings.json
+    ~/Library/Application Support/Code/User/settings.json:
+      force: true
+      path: visual-studio-code/settings.json
+    ~/Library/Application Support/Code/User/snippets:
+      force: true
+      path: visual-studio-code/snippets
 
 - shell:
   - chmod -R +x ~/bin
