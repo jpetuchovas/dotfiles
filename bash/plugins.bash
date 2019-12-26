@@ -1,4 +1,4 @@
-# Homebrew’s completions
+# Homebrew's completions
 HOMEBREW_PREFIX=$(brew --prefix)
 if type brew &>/dev/null; then
   for COMPLETION in "$HOMEBREW_PREFIX"/etc/bash_completion.d/*; do
@@ -17,7 +17,7 @@ if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-# Arcanist’s tab completion
+# Arcanist's tab completion
 ARCANIST_PREFIX="${HOME}/tools/arcanist"
 if [[ -d $ARCANIST_PREFIX ]]; then
   source "${ARCANIST_PREFIX}/resources/shell/bash-completion"
