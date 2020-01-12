@@ -6,6 +6,7 @@
 
 # Editors
 .vscode
+.devcontainer
 
 # Code analysis
 .mypy_cache
