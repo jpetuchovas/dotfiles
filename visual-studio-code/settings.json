@@ -36,6 +36,10 @@
     "editor.rulers": []
   },
   "[python]": {
+    "editor.codeActionsOnSave":{
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
     "editor.rulers": [72, 88],
     "editor.tabSize": 4
   },
