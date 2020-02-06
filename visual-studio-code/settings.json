@@ -46,6 +46,7 @@
   // Extension settings
   "python.formatting.provider": "black",
   "python.jediEnabled": false,
+  "python.linting.mypyEnabled": true,
   "python.terminal.activateEnvironment": false,
   "vsicons.dontShowNewVersionMessage": true,
   "remote.containers.defaultExtensions": [
