@@ -36,6 +36,9 @@
     ~/Library/Application Support/Code/User/snippets:
       force: true
       path: visual-studio-code/snippets
+    ~/Library/Application Support/Code/User/tasks.json:
+      force: true
+      path: visual-studio-code/tasks.json
 
 - shell:
   - chmod -R +x ~/bin
