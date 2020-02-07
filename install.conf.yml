@@ -24,6 +24,7 @@
     ~/.shell:
     ~/.ssh/config:
       path: ssh/config
+    ~/.vimrc:
     ~/.vscode-extensions:
       path: visual-studio-code/extensions
     ~/Library/Application Support/Code/User/keybindings.json:
