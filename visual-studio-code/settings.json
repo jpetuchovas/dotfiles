@@ -5,6 +5,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "solid",
+  "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "selection",
   "editor.rulers": [80],
@@ -51,11 +52,13 @@
   "vsicons.dontShowNewVersionMessage": true,
   "remote.containers.defaultExtensions": [
     "mutantdino.resourcemonitor",
-    "ryu1kn.text-marker"
+    "ryu1kn.text-marker",
+    "vscodevim.vim"
   ],
   "remote.SSH.defaultExtensions": [
     "mutantdino.resourcemonitor",
-    "ryu1kn.text-marker"
+    "ryu1kn.text-marker",
+    "vscodevim.vim"
   ],
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
