@@ -57,6 +57,5 @@
     "mutantdino.resourcemonitor",
     "ryu1kn.text-marker"
   ],
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "vim.easymotion": true
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
