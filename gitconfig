@@ -17,6 +17,9 @@
 [core]
   excludesfile = ~/.gitignore_global
 
+[diff]
+  ignoreSubmodules = dirty
+
 [pretty]
   line = %Cred%h%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen%ar
 
