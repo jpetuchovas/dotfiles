@@ -1,1 +1,1 @@
-export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/Dropbox/repos/scripts:${HOME}/bin:${PATH}"
