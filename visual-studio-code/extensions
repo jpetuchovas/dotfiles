@@ -2,6 +2,7 @@ code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension EditorConfig.EditorConfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension James-Yu.latex-workshop
+code --install-extension kortina.vscode-markdown-notes
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-python.python
 code --install-extension ms-vscode-remote.remote-containers
