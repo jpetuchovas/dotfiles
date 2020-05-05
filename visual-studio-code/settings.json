@@ -36,7 +36,7 @@
     "editor.rulers": []
   },
   "[python]": {
-    "editor.codeActionsOnSave":{
+    "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
     "editor.formatOnSave": true,
@@ -44,6 +44,12 @@
     "editor.tabSize": 4
   },
   // Extension settings
+  "markdownlint.config": {
+    "default": true,
+    "no-alt-text": false,
+    "ul-indent": { "indent": 4 },
+    "ul-style": { "style": "asterisk" }
+  },
   "python.formatting.provider": "black",
   "python.jediEnabled": false,
   "python.linting.mypyEnabled": true,
