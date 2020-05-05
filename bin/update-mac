@@ -4,3 +4,4 @@ brew update
 brew upgrade --ignore-pinned
 brew cask upgrade
 brew cleanup
+mas upgrade
