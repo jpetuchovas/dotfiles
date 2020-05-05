@@ -16,4 +16,6 @@ code --install-extension shuworks.vscode-table-formatter
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
+code --install-extension vscode-nested-tags.vscode-nested-tags
+code --install-extension wmaurer.change-case
 code --install-extension zxh404.vscode-proto3
