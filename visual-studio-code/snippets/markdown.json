@@ -4,19 +4,22 @@
     "description": "Write the current date",
     "body": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"
   },
-  "standup": {
-    "prefix": "standup",
-    "description": "Create a template for a standup entry",
+  "tags": {
+    "prefix": "tgs",
+    "description": "Create metadata section with with tags list",
     "body": [
-      "## $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "---",
+      "tags: [$0]",
+      "---",
       "",
-      "*Yesterday*:",
-      "",
-      "- ",
-      "",
-      "*Plan for today*:",
-      "",
-      "- "
+      ""
+    ]
+  },
+  "title": {
+    "prefix": "tl",
+    "description": "Generate a title by replacing underscores in the filename with spaces",
+    "body": [
+      "# ${TM_FILENAME_BASE/[\\._]/ /g}"
     ]
   }
 }
