@@ -62,6 +62,7 @@
   // Extension settings
   "markdownlint.config": {
     "default": true,
+    "no-duplicate-header": { "allow_different_nesting": true },
     "no-alt-text": false,
     "ul-indent": { "indent": 4 },
     "ul-style": { "style": "asterisk" }
