@@ -9,6 +9,7 @@ code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode-remote.remote-ssh-edit
 code --install-extension ms-vscode.cpptools
+code --install-extension Prisma.vscode-graphql
 code --install-extension redhat.vscode-yaml
 code --install-extension ryu1kn.text-marker
 code --install-extension shd101wyy.markdown-preview-enhanced
