@@ -68,7 +68,7 @@
     "ul-style": { "style": "asterisk" }
   },
   "python.formatting.provider": "black",
-  "python.jediEnabled": false,
+  "python.languageServer": "Microsoft",
   "python.linting.mypyEnabled": true,
   "python.terminal.activateEnvironment": false,
   "vsicons.dontShowNewVersionMessage": true,
