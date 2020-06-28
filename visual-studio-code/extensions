@@ -2,7 +2,6 @@ code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension EditorConfig.EditorConfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension James-Yu.latex-workshop
-code --install-extension kortina.vscode-markdown-notes
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-python.python
 code --install-extension ms-vscode-remote.remote-containers
@@ -17,6 +16,5 @@ code --install-extension shuworks.vscode-table-formatter
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
-code --install-extension vscode-nested-tags.vscode-nested-tags
 code --install-extension wmaurer.change-case
 code --install-extension zxh404.vscode-proto3
