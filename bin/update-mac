@@ -3,4 +3,5 @@
 brew update
 brew upgrade --ignore-pinned
 brew cleanup
+n-update -y
 mas upgrade
