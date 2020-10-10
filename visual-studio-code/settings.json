@@ -67,6 +67,7 @@
     "ul-indent": { "indent": 4 },
     "ul-style": { "style": "asterisk" }
   },
+  "python.experiments.enabled": false,
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.linting.mypyEnabled": true,
