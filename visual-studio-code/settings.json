@@ -71,6 +71,7 @@
   "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.linting.mypyEnabled": true,
+  "python.sortImports.path": "isort",
   "python.terminal.activateEnvironment": false,
   "vsicons.dontShowNewVersionMessage": true,
   "remote.containers.defaultExtensions": [
