@@ -23,6 +23,9 @@
 [pretty]
   line = %Cred%h%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen%ar
 
+[pull]
+  ff = only
+
 [transfer]
   fsckObjects = true
 
