@@ -81,5 +81,8 @@
   "remote.SSH.defaultExtensions": [
     "mutantdino.resourcemonitor"
   ],
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  }
 }
