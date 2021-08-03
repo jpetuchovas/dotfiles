@@ -22,6 +22,7 @@
   "less.lint.zeroUnits": "warning",
   "scss.lint.duplicateProperties": "warning",
   "scss.lint.zeroUnits": "warning",
+  "security.workspace.trust.enabled": false,
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "terminal.integrated.macOptionIsMeta": true,
