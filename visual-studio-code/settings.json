@@ -17,7 +17,7 @@
   "files.trimTrailingWhitespace": true,
   "html.format.endWithNewline": true,
   "html.format.indentInnerHtml": true,
-  "javascript.implicitProjectConfig.checkJs": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
   "less.lint.duplicateProperties": "warning",
   "less.lint.zeroUnits": "warning",
   "scss.lint.duplicateProperties": "warning",
@@ -75,12 +75,10 @@
   "python.terminal.activateEnvironment": false,
   "vsicons.dontShowNewVersionMessage": true,
   "remote.containers.defaultExtensions": [
-    "mutantdino.resourcemonitor",
-    "ryu1kn.text-marker"
+    "mutantdino.resourcemonitor"
   ],
   "remote.SSH.defaultExtensions": [
-    "mutantdino.resourcemonitor",
-    "ryu1kn.text-marker"
+    "mutantdino.resourcemonitor"
   ],
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
