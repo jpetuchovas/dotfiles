@@ -24,6 +24,7 @@
     ~/.shell:
     ~/.ssh/config:
       path: ssh/config
+    ~/.tmux.conf:
     ~/.vimrc:
     ~/.vscode-extensions:
       path: visual-studio-code/extensions
