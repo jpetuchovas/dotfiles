@@ -1,3 +1,7 @@
+call plug#begin('~/.vim/plugged')
+Plug 'tomasiser/vim-code-dark'
+call plug#end()
+
 filetype plugin indent on
 set autoindent
 set backspace=2
@@ -15,3 +19,5 @@ set tabstop=2
 syntax on
 
 autocmd FileType python set sw=4 sts=4 et
+
+colorscheme codedark
