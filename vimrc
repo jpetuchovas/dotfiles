@@ -4,6 +4,7 @@ call plug#end()
 
 filetype plugin indent on
 set autoindent
+set autoread
 set backspace=2
 set colorcolumn=50,72
 set cursorline
