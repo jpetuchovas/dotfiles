@@ -14,6 +14,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
+set nojoinspaces
 set number
 set relativenumber
 set shiftwidth=2
@@ -21,6 +22,8 @@ set showtabline=2
 set smartcase
 set softtabstop=2
 set tabstop=2
+set wildmenu
+set wildmode=longest,list
 syntax on
 
 autocmd FileType gitcommit set colorcolumn=51,73 textwidth=72
