@@ -45,7 +45,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.rulers": []
+    "editor.tabSize": 4
   },
   "[python]": {
     "editor.codeActionsOnSave": {
