@@ -5,6 +5,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "solid",
+  "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "selection",
   "editor.rulers": [80],
