@@ -11,8 +11,6 @@
   st = status --short --branch
   # Undo last commit.
   undo = reset --soft HEAD^
-  update-submodules = submodule update --init --recursive
-  upgrade-submodules = submodule update --init --remote
 
 [core]
   excludesfile = ~/.gitignore_global
