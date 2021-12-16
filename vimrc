@@ -27,7 +27,7 @@ set wildmode=longest,list
 syntax on
 
 autocmd FileType gitcommit set colorcolumn=51,73 textwidth=72
-autocmd FileType markdown set shiftwidth=4 softtabstop=4
+autocmd FileType markdown set colorcolumn=73,81,89 shiftwidth=4 softtabstop=4
 autocmd FileType python set colorcolumn=73,89 shiftwidth=4 softtabstop=4
 
 colorscheme codedark
