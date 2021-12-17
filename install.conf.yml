@@ -12,6 +12,9 @@
     ~/bin:
     ~/.config/flake8:
       path: config/flake8
+    ~/.config/karabiner/karabiner.json:
+      force: true
+      path: config/karabiner/karabiner.json
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:
