@@ -27,6 +27,14 @@ set wildmenu
 set wildmode=longest,list
 syntax on
 
+let mapleader=","
+map <leader>y "*y
+" Switch between splits easier.
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
 autocmd FileType gitcommit set colorcolumn=51,73 textwidth=72
 autocmd FileType markdown set colorcolumn=73,81,89 shiftwidth=4 softtabstop=4
 autocmd FileType python set colorcolumn=73,89 shiftwidth=4 softtabstop=4

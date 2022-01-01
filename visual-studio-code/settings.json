@@ -87,6 +87,8 @@
     "mutantdino.resourcemonitor"
   ],
   "vim.hlsearch": true,
+  "vim.leader": ",",
+  "vim.vimrc.enable": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
