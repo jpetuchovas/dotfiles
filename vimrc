@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'tomasiser/vim-code-dark'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 filetype plugin indent on
