@@ -24,6 +24,9 @@
 [pull]
   ff = only
 
+[push]
+  default = current
+
 [transfer]
   fsckObjects = true
 
