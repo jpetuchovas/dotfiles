@@ -4,4 +4,4 @@ shopt -s histappend
 HISTSIZE=100000
 HISTTIMEFORMAT='%F %T '
 
-export EDITOR=vim
+export EDITOR=nvim
