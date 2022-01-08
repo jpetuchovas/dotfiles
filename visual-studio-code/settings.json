@@ -24,8 +24,7 @@
   "scss.lint.duplicateProperties": "warning",
   "scss.lint.zeroUnits": "warning",
   "security.workspace.trust.enabled": false,
-  "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false,
+  "telemetry.telemetryLevel": "off",
   "terminal.integrated.macOptionIsMeta": true,
   "window.restoreWindows": "all",
   "window.zoomLevel": 1,
@@ -86,8 +85,11 @@
   "remote.SSH.defaultExtensions": [
     "mutantdino.resourcemonitor"
   ],
+  "vim.enableNeovim": true,
   "vim.hlsearch": true,
   "vim.leader": ",",
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.neovimUseConfigFile": true,
   "vim.vimrc.enable": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.editorAssociations": {
