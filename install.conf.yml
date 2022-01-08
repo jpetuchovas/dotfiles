@@ -15,6 +15,8 @@
     ~/.config/karabiner/karabiner.json:
       force: true
       path: config/karabiner/karabiner.json
+    ~/.config/nvim/init.vim:
+      path: config/nvim/init.vim
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:
