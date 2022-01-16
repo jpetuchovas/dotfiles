@@ -18,6 +18,9 @@
 [diff]
   ignoreSubmodules = dirty
 
+[init]
+  defaultBranch = main
+
 [pretty]
   line = %Cred%h%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen%ar
 
