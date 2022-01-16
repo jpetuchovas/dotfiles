@@ -20,6 +20,7 @@
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:
+    ~/.ideavimrc:
     ~/.inputrc:
     ~/.isort.cfg:
     ~/.mypy.ini:
