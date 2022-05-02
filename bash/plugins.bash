@@ -9,6 +9,11 @@ if type brew &>/dev/null; then
   fi
 fi
 
+# Homebrew setup on M1 MacBook.
+if [[ $(uname -m) == 'arm64' ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
