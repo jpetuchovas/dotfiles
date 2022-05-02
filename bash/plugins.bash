@@ -1,3 +1,8 @@
+# Homebrew setup on M1 MacBook.
+if [[ $(uname -m) == 'arm64' ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Homebrew's completions
 HOMEBREW_PREFIX=$(brew --prefix)
 if type brew &>/dev/null; then
@@ -7,11 +12,6 @@ if type brew &>/dev/null; then
   if [[ -f ${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh ]]; then
     source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
   fi
-fi
-
-# Homebrew setup on M1 MacBook.
-if [[ $(uname -m) == 'arm64' ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if command -v pyenv 1>/dev/null 2>&1; then
