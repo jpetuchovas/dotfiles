@@ -16,6 +16,8 @@ code --install-extension ms-vscode.cpptools
 code --install-extension redhat.java
 code --install-extension redhat.vscode-commons
 code --install-extension redhat.vscode-yaml
+code --install-extension scala-lang.scala
+code --install-extension scalameta.metals
 code --install-extension shuworks.vscode-table-formatter
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension VisualStudioExptTeam.vscodeintellicode

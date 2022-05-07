@@ -5,8 +5,10 @@
 *.pyc
 
 # Editors
-.vscode
 .devcontainer
+.idea
+.metals
+.vscode
 
 # Code analysis
 .mypy_cache
