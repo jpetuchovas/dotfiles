@@ -12,14 +12,15 @@
     ~/bin:
     ~/.config/flake8:
       path: config/flake8
-    ~/.config/karabiner/karabiner.json:
-      force: true
-      path: config/karabiner/karabiner.json
     ~/.config/nvim/init.vim:
       path: config/nvim/init.vim
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:
+    ~/.hammerspoon/caps-lock-modification.lua:
+      path: hammerspoon/caps-lock-modification.lua
+    ~/.hammerspoon/init.lua:
+      path: hammerspoon/init.lua
     ~/.ideavimrc:
     ~/.inputrc:
     ~/.isort.cfg:
