@@ -55,6 +55,9 @@
     "editor.rulers": [72, 88],
     "editor.tabSize": 4
   },
+  "[scala]": {
+    "editor.formatOnSave": true
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
