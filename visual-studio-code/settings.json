@@ -16,6 +16,11 @@
   "explorer.openEditors.visible": 0,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
   "html.format.endWithNewline": true,
   "html.format.indentInnerHtml": true,
   "js/ts.implicitProjectConfig.checkJs": true,
