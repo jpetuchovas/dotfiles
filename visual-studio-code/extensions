@@ -1,3 +1,4 @@
+code --install-extension BazelBuild.vscode-bazel
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension EditorConfig.EditorConfig
 code --install-extension esbenp.prettier-vscode
