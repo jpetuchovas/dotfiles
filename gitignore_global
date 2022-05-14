@@ -5,8 +5,10 @@
 *.pyc
 
 # Editors
+.bloop
 .devcontainer
 .idea
+.ijwb
 .metals
 .vscode
 
