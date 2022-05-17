@@ -28,6 +28,7 @@
     ~/.nanorc:
     ~/.psqlrc:
     ~/.pydocstylerc:
+    ~/.scalafmt.conf:
     ~/.shell:
     ~/.ssh/config:
       path: ssh/config
