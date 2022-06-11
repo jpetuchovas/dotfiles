@@ -1,7 +1,7 @@
 {
   "css.lint.duplicateProperties": "warning",
   "css.lint.zeroUnits": "warning",
-  "debug.inlineValues": true,
+  "debug.inlineValues": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "solid",
