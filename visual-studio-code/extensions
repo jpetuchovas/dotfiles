@@ -2,6 +2,7 @@ code --install-extension BazelBuild.vscode-bazel
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension EditorConfig.EditorConfig
 code --install-extension esbenp.prettier-vscode
+code --install-extension golang.go
 code --install-extension GraphQL.vscode-graphql
 code --install-extension James-Yu.latex-workshop
 code --install-extension ms-azuretools.vscode-docker
