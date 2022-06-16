@@ -28,6 +28,7 @@ set wildmode=longest,list
 syntax on
 
 let mapleader=","
+" Copy to clipboard
 map <leader>y "*y
 " Switch between splits easier.
 nnoremap <c-h> <c-w>h
