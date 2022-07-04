@@ -1,1 +1,5 @@
 source ~/.vimrc
+
+" Fixes navigation history.
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
