@@ -22,3 +22,6 @@ fi
 if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
