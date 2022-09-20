@@ -8,6 +8,7 @@
 .bloop
 .devcontainer
 .idea
+*.iml
 .ijwb
 .metals
 .vscode
