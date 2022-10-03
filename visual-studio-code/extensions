@@ -23,6 +23,7 @@ code --install-extension scala-lang.scala
 code --install-extension scalameta.metals
 code --install-extension shuworks.vscode-table-formatter
 code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscjava.vscode-java-debug
 code --install-extension vscode-icons-team.vscode-icons
