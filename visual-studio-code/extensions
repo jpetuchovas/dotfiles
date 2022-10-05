@@ -16,6 +16,7 @@ code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode-remote.remote-ssh-edit
 code --install-extension ms-vscode.cpptools
+code --install-extension Orta.vscode-jest
 code --install-extension redhat.java
 code --install-extension redhat.vscode-commons
 code --install-extension redhat.vscode-yaml
