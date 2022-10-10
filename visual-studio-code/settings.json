@@ -22,7 +22,6 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
-  "html.format.endWithNewline": true,
   "html.format.indentInnerHtml": true,
   "js/ts.implicitProjectConfig.checkJs": true,
   "less.lint.duplicateProperties": "warning",
@@ -73,6 +72,9 @@
     "editor.formatOnSave": true
   },
   // Extension settings
+  "dev.containers.defaultExtensions": [
+    "mutantdino.resourcemonitor"
+  ],
   "markdownlint.config": {
     "default": true,
     "no-duplicate-header": { "allow_different_nesting": true },
@@ -87,10 +89,6 @@
   "python.sortImports.path": "isort",
   "python.terminal.activateEnvironment": false,
   "redhat.telemetry.enabled": false,
-  "vsicons.dontShowNewVersionMessage": true,
-  "remote.containers.defaultExtensions": [
-    "mutantdino.resourcemonitor"
-  ],
   "remote.SSH.defaultExtensions": [
     "mutantdino.resourcemonitor"
   ],
@@ -100,6 +98,7 @@
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.neovimUseConfigFile": true,
   "vim.vimrc.enable": true,
+  "vsicons.dontShowNewVersionMessage": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
