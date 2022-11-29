@@ -3,4 +3,4 @@ alias grep='grep --color=auto'
 
 alias ll='ls -ahl'
 
-alias rback="perl -i -0pe 's/## Backlinks[\s\S]*//gim' *.md"
+alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
