@@ -1,0 +1,4 @@
+live_config_reload: true
+
+font:
+  size: 20.0
