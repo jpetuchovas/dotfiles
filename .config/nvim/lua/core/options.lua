@@ -9,3 +9,5 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.hlsearch = false
+
+vim.opt.termguicolors = true
