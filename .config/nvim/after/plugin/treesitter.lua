@@ -1,5 +1,8 @@
 require("nvim-treesitter.configs").setup({
-  ensure_installed = {"c", "go", "javascript", "lua", "python", "typescript", "vim"},
+  ensure_installed = {
+    "c", "go", "javascript", "lua", "markdown", "proto", "python", 
+    "typescript", "vim",
+  },
   sync_install = false,
   auto_install = true,
   highlight = {
