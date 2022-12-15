@@ -5,7 +5,7 @@ font:
     family: JetBrains Mono
   size: 20.0
 
-# Gruvbox Material Dark Medium
+# Gruvbox Material Dark Medium.
 colors:
   primary:
     background: '0x282828'
@@ -29,7 +29,17 @@ colors:
     cyan:    '0x89b482'
     white:   '0xd4be98'
 
+# macOS workarounds.
 key_bindings:
+  - key: B
+    mods: Alt
+    chars: "\x1bb"
+  - key: D
+    mods: Alt
+    chars: "\x1bd"
+  - key: F
+    mods: Alt
+    chars: "\x1bf"
   - key: N
     mods: Command
     action: CreateNewWindow
