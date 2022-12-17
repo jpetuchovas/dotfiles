@@ -1,12 +1,21 @@
 require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
+
+  use("sainnhe/gruvbox-material")
+
+  use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
+  use("nvim-treesitter/playground")
+
   use({
     "nvim-telescope/telescope.nvim",
     tag = "0.1.0",
     requires = {{"nvim-lua/plenary.nvim"}}
   })
-  use("sainnhe/gruvbox-material")
-  use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
+  use("ThePrimeagen/harpoon")
+
+  use("mbbill/undotree")
+  use("tpope/vim-fugitive")
+
   use({
     "VonHeikemen/lsp-zero.nvim",
     requires = {
