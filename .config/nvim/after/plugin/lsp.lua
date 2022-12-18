@@ -10,6 +10,15 @@ lsp.ensure_installed({
   "tsserver",
 })
 
+lsp.set_preferences({
+  sign_icons = {
+    error = "E",
+    warn = "W",
+    hint = "H",
+    info = "I"
+  }
+})
+
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
