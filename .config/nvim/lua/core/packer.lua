@@ -4,6 +4,10 @@ require("packer").startup(function(use)
   use("sainnhe/gruvbox-material")
 
   use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+  use({
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+  })
   use("nvim-treesitter/playground")
 
   use({
