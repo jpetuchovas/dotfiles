@@ -5,6 +5,7 @@ lsp.ensure_installed({
   "bufls",
   "eslint",
   "gopls",
+  "jsonls",
   "pyright",
   "sumneko_lua",
   "tsserver",
