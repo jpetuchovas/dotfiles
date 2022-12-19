@@ -22,8 +22,9 @@ require("packer").startup(function(use)
   })
   use("ThePrimeagen/harpoon")
 
-  use("numToStr/Comment.nvim")
   use("mbbill/undotree")
+
+  use("numToStr/Comment.nvim")
 
   use("tpope/vim-fugitive")
   use("lewis6991/gitsigns.nvim")
