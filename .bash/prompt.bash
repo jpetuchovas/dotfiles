@@ -20,7 +20,7 @@ find_git_branch() {
 check_if_dirty() {
   local status=$(git status --porcelain 2> /dev/null)
   if [[ "${status}" != "" ]]; then
-    git_dirty=' ✗ '
+    git_dirty=' x '
   else
     git_dirty=''
   fi
