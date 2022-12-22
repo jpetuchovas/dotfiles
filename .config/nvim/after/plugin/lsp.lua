@@ -49,7 +49,14 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.isort,
-    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.prettier.with({
+      filetypes = {
+         "javascript",
+         "javascriptreact",
+         "typescript",
+         "typescriptreact",
+      },
+    }),
   },
   -- Formats on save.
   on_attach = function(client, bufnr)
