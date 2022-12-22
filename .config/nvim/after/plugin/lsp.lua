@@ -62,7 +62,7 @@ null_ls.setup({
           vim.lsp.buf.format({
             bufnr = bufnr,
             filter = function(clnt)
-                return clnt.name == "null-ls"
+              return clnt.name == "null-ls"
             end,
           })
         end,
