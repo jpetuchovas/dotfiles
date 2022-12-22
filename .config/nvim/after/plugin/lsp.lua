@@ -45,22 +45,34 @@ vim.diagnostic.config({virtual_text = true})
 
 local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+local filetypes_to_format_on_save = {
+  "python",
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "typescriptreact",
+}
+local function should_format(buffer_filetype)
+  for _, filetype in pairs(filetypes_to_format_on_save) do
+    if filetype == buffer_filetype then
+      return true
+    end
+  end
+
+  return false
+end
+
 null_ls.setup({
   sources = {
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.isort,
-    null_ls.builtins.formatting.prettier.with({
-      filetypes = {
-         "javascript",
-         "javascriptreact",
-         "typescript",
-         "typescriptreact",
-      },
-    }),
+    null_ls.builtins.formatting.prettier,
   },
   -- Formats on save.
   on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
+    if should_format(vim.bo[bufnr].filetype)
+        and client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({group = augroup, buffer = bufnr})
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = augroup,
