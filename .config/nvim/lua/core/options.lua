@@ -22,3 +22,6 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
 
 vim.opt.spelllang = "en_us,lt"
+
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
