@@ -28,7 +28,7 @@ lsp.set_preferences({
   },
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
   vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
