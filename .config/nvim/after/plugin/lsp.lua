@@ -10,13 +10,19 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.ensure_installed({
+  "bashls",
   "bufls",
+  "clangd",
+  "dockerls",
   "eslint",
   "gopls",
   "jsonls",
+  "marksman",
   "pyright",
   "sumneko_lua",
+  "texlab",
   "tsserver",
+  "yamlls",
 })
 
 lsp.set_preferences({
@@ -65,9 +71,11 @@ end
 
 null_ls.setup({
   sources = {
+    null_ls.builtins.diagnostics.shellcheck,
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.isort,
     null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.shfmt,
   },
   -- Formats on save.
   on_attach = function(client, bufnr)
