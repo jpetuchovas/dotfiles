@@ -45,6 +45,21 @@ end)
 
 lsp.nvim_workspace()
 
+lsp.configure("texlab", {
+  settings = {
+    texlab = {
+      build = {
+        forwardSearchAfter = true,
+        onSave = true,
+      },
+      forwardSearch = {
+        executable = "/Applications/Skim.app/Contents/SharedSupport/displayline",
+        args = {"%l", "%p", "%f"},
+      },
+    },
+  },
+})
+
 lsp.setup()
 
 vim.diagnostic.config({virtual_text = true})
