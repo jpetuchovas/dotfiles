@@ -64,6 +64,7 @@ lsp.setup()
 
 vim.diagnostic.config({virtual_text = true})
 
+-- null-ls setup.
 local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -111,4 +112,60 @@ null_ls.setup({
       })
     end
   end,
+})
+
+-- nvim-metals for Scala setup.
+local metals = require("metals")
+local metals_config = metals.bare_config()
+metals_config.settings = {
+  showImplicitArguments = true,
+}
+metals_config.init_options.statusBarProvider = "on"
+metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+local dap = require("dap")
+dap.configurations.scala = {
+  {
+    type = "scala",
+    request = "launch",
+    name = "RunOrTest",
+    metals = {
+      runType = "runOrTestFile",
+    },
+  },
+  {
+    type = "scala",
+    request = "launch",
+    name = "Test Target",
+    metals = {
+      runType = "testTarget",
+    },
+  },
+}
+metals_config.on_attach = function(_, bufnr)
+  local opts = {buffer = bufnr, remap = false}
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+  vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+  vim.keymap.set("n", "go", vim.lsp.buf.type_definition, opts)
+  vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+  vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
+  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+  vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+  vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
+  vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
+  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+
+  metals.setup_dap()
+end
+
+local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", {clear = true})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"scala", "sbt", "java"},
+  callback = function()
+    metals.initialize_or_attach(metals_config)
+  end,
+  group = nvim_metals_group,
 })

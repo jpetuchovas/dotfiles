@@ -50,6 +50,13 @@ require("packer").startup(function(use)
     }
   })
   use("jose-elias-alvarez/null-ls.nvim")
+  use({
+    "scalameta/nvim-metals",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "mfussenegger/nvim-dap",
+    },
+  })
 
   use("folke/zen-mode.nvim")
 end)
