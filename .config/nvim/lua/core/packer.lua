@@ -59,8 +59,9 @@ require("packer").startup(function(use)
   })
 
   use({"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}})
-  use("mfussenegger/nvim-dap-python")
   use("theHamsta/nvim-dap-virtual-text")
+  use("mfussenegger/nvim-dap-python")
+  use({"mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"}})
 
   use("folke/zen-mode.nvim")
 end)
