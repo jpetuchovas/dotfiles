@@ -7,12 +7,18 @@ setopt AUTO_CD
 HISTSIZE=100000
 SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 alias grep='grep --color=auto'
 alias ll='ls -ahl'
 alias ls='ls -G'
 alias vim=nvim
+
+# Edit current command in EDITOR.
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
 
 # Prompt customization.
 find_git_branch() {
@@ -64,3 +70,6 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374"
