@@ -15,6 +15,9 @@ alias ll='ls -ahl'
 alias ls='ls -G'
 alias vim=nvim
 
+autoload -U select-word-style
+select-word-style bash
+
 # Edit current command in EDITOR.
 autoload -U edit-command-line
 zle -N edit-command-line
