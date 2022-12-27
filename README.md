@@ -22,6 +22,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 # https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
 /*/*/Cellar/ncurses/6.3/bin/infocmp -x tmux-256color >tmux-256color.src
 sudo /usr/bin/tic -x tmux-256color.src
+
+# May also need to execute this fix for zsh:
+# https://github.com/zsh-users/zsh-completions/issues/433#issuecomment-815872839
 ```
 
 The `dotfiles` alias can be used to interact with the dotfiles repository.
