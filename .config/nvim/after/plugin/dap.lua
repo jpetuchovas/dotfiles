@@ -45,7 +45,7 @@ require("dap-python").setup(
 )
 
 require("dap-vscode-js").setup({
-  debugger_path = "/Users/justinas/.local/share/nvim/mason/packages/js-debug-adapter",
+  debugger_path = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/js-debug-adapter",
   adapters = {"pwa-node"},
 })
 
