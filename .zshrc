@@ -1,7 +1,5 @@
 export EDITOR=nvim
 
-bindkey -e
-
 setopt AUTO_CD
 
 HISTSIZE=100000
@@ -15,8 +13,32 @@ alias ll='ls -ahl'
 alias ls='ls -G'
 alias vim=nvim
 
+bindkey -e
+
+# Navigate through commands in history as usual, or if the cursor is at the
+# last position of a inputted command, use the prefix up to the cursor position
+# for searching.
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+# Up arrow.
+bindkey '^[[A' up-line-or-beginning-search
+# Down arrow.
+bindkey '^[[B' down-line-or-beginning-search
+bindkey -M emacs '^P' up-line-or-beginning-search
+bindkey -M emacs '^N' down-line-or-beginning-search
+
+# Perform history expansion when space is pressed after an event designator
+# such as !!.
+bindkey ' ' magic-space
+
+# Bash-like navigation/deletion when using Alt and Ctrl.
 autoload -U select-word-style
 select-word-style bash
+zle -N backward-kill-space-word backward-kill-word-match
+zstyle :zle:backward-kill-space-word word-style space
+bindkey '^w' backward-kill-space-word
 
 # Edit current command in EDITOR.
 autoload -U edit-command-line
@@ -42,7 +64,10 @@ check_if_dirty() {
   fi
 }
 
-precmd() { find_git_branch; check_if_dirty }
+precmd() {
+  find_git_branch
+  check_if_dirty
+}
 
 setopt PROMPT_SUBST
 PS1='%F{blue}%(5~|%-1~/.../%3~|%4~)%F{yellow}${git_branch}%F{red}${git_dirty}%F{black}$%f '
@@ -50,29 +75,26 @@ PS2='%F{black}>%f '
 
 export PATH="${HOME}/Dropbox/repos/scripts:${HOME}/bin:${PATH}"
 
-# zsh-completions.
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
-export HOMEBREW_NO_ANALYTICS=1
-
 # Added by n-install (see http://git.io/n-install-repo).
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
-
-# Homebrew setup on M1 MacBook.
-if [[ $(uname -m) == 'arm64' ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
 eval "$(pyenv virtualenv-init -)"
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export HOMEBREW_NO_ANALYTICS=1
+local brew_prefix=$(brew --prefix)
+
+# Homebrew setup on M1 MacBook.
+if [[ $(uname -m) == 'arm64' ]]; then
+  eval "$($brew_prefix/bin/brew shellenv)"
+fi
+
+# zsh-completions.
+FPATH=$brew_prefix/share/zsh-completions:$FPATH
+autoload -Uz compinit
+compinit
+
+source $brew_prefix/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374"
