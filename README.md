@@ -14,6 +14,7 @@ exec $SHELL
 dotfiles config --local status.showUntrackedFiles no
 sh .vscode-extensions
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Fix issues with tmux on macOS:
 # https://github.com/tmux/tmux/issues/3218
