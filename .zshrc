@@ -6,6 +6,7 @@ HISTSIZE=100000
 SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 alias grep='grep --color=auto'
