@@ -84,12 +84,12 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export HOMEBREW_NO_ANALYTICS=1
-local brew_prefix=$(brew --prefix)
-
 # Homebrew setup on M1 MacBook.
 if [[ $(uname -m) == 'arm64' ]]; then
-  eval "$($brew_prefix/bin/brew shellenv)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+local brew_prefix=$(brew --prefix)
 
 # zsh-completions.
 FPATH=$brew_prefix/share/zsh-completions:$FPATH
