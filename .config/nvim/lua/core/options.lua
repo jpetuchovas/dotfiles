@@ -19,7 +19,7 @@ vim.opt.undofile = true
 
 vim.opt.signcolumn = "yes"
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 4
 
 vim.opt.colorcolumn = "80"
 
