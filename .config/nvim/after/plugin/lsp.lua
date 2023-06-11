@@ -1,11 +1,19 @@
-local lsp = require("lsp-zero")
-lsp.preset("recommended")
-
-lsp.setup_nvim_cmp({
-  sources = {
-    {name = "path"},
-    {name = "nvim_lsp", keyword_length = 2},
-    {name = "buffer", keyword_length = 2},
+local lsp = require("lsp-zero").preset({
+  float_border = "rounded",
+  call_servers = "local",
+  configure_diagnostics = true,
+  setup_servers_on_start = true,
+  set_lsp_keymaps = {
+    preserve_mappings = false,
+    omit = {},
+  },
+  manage_nvim_cmp = {
+    set_sources = "recommended",
+    set_basic_mappings = true,
+    set_extra_mappings = false,
+    use_luasnip = true,
+    set_format = true,
+    documentation_window = true,
   },
 })
 
@@ -20,10 +28,19 @@ lsp.ensure_installed({
   "lua_ls",
   "marksman",
   "pyright",
-  "texlab",
   "tsserver",
   "yamlls",
 })
+
+lsp.on_attach(function(_, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+
+  local opts = {buffer = bufnr, remap = false}
+  vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
+  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+  vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+  vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
+end)
 
 lsp.set_sign_icons({
   error = "E",
@@ -32,33 +49,30 @@ lsp.set_sign_icons({
   info = "I",
 })
 
-lsp.on_attach(function(_, bufnr)
-  local opts = {buffer = bufnr, remap = false}
-
-  vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
-  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-  vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-  vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-end)
-
-lsp.nvim_workspace()
-
-lsp.configure("texlab", {
-  settings = {
-    texlab = {
-      build = {
-        forwardSearchAfter = true,
-        onSave = true,
-      },
-      forwardSearch = {
-        executable = "/Applications/Skim.app/Contents/SharedSupport/displayline",
-        args = {"-g", "%l", "%p", "%f"},
-      },
-    },
-  },
-})
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
+
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+cmp.setup({
+  sources = {
+    {name = "path"},
+    {name = "nvim_lsp", keyword_length = 2},
+    {name = "buffer", keyword_length = 2},
+  },
+  mapping = {
+    ["<CR>"] = cmp.mapping.confirm({select = false}),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<Tab>"] = cmp_action.tab_complete(),
+    ["<S-Tab>"] = cmp_action.select_prev_or_fallback(),
+  },
+  preselect = "item",
+  completion = {
+    completeopt = "menu,menuone,noinsert",
+  },
+})
 
 vim.diagnostic.config({virtual_text = true})
 
