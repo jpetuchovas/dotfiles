@@ -41,7 +41,9 @@ local plugins = {
       {"neovim/nvim-lspconfig"},
       {
         'williamboman/mason.nvim',
-        build = ":MasonUpdate",
+        build = function()
+          pcall(vim.cmd, "MasonUpdate")
+        end,
       },
       {"williamboman/mason-lspconfig.nvim"},
 
