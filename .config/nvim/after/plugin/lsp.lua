@@ -25,13 +25,11 @@ lsp.ensure_installed({
   "yamlls",
 })
 
-lsp.set_preferences({
-  sign_icons = {
-    error = "E",
-    warn = "W",
-    hint = "H",
-    info = "I",
-  },
+lsp.set_sign_icons({
+  error = "E",
+  warn = "W",
+  hint = "H",
+  info = "I",
 })
 
 lsp.on_attach(function(_, bufnr)
