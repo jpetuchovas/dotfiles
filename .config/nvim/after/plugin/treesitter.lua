@@ -13,6 +13,7 @@ require("nvim-treesitter.configs").setup({
     "lua",
     "make",
     "markdown",
+    "nix",
     "proto",
     "python",
     "scala",

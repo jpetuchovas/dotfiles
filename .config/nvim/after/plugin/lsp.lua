@@ -27,6 +27,7 @@ lsp.ensure_installed({
   "jsonls",
   "lua_ls",
   "marksman",
+  "nil_ls",
   "pyright",
   "tsserver",
   "yamlls",
