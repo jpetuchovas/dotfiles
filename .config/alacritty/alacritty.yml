@@ -4,6 +4,8 @@ font:
   normal:
     family: JetBrains Mono
     style: Medium
+  italic:
+    style: Medium Italic
   size: 20.0
 
 # Gruvbox material dark medium.
