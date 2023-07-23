@@ -20,7 +20,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Related:
 # https://www.rockyourcode.com/til-how-to-fix-cannot-read-termcap-database-with-tmux-and-kitty-on-macos/
 # https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
-/*/*/Cellar/ncurses/6.3/bin/infocmp -x tmux-256color >tmux-256color.src
+/*/*/Cellar/ncurses/6.4/bin/infocmp -x tmux-256color >tmux-256color.src
 sudo /usr/bin/tic -x tmux-256color.src
 
 # May also need to execute this fix for zsh:
