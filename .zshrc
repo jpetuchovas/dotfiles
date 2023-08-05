@@ -88,15 +88,20 @@ if [[ $(uname -m) == 'arm64' ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-local brew_prefix=$(brew --prefix)
-
 # zsh-completions.
-FPATH=$brew_prefix/share/zsh-completions:$FPATH
+FPATH=$HOME/.nix-profile/share/zsh/site-functions:$FPATH
 autoload -Uz compinit
 compinit
 
-source $brew_prefix/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374"
+enable_zsh_autosuggestions() {
+  local zsh_autosuggestions_path=$HOME/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  if [[ -f $zsh_autosuggestions_path ]]; then
+    source $zsh_autosuggestions_path
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374"
+  fi
+}
+
+enable_zsh_autosuggestions
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
