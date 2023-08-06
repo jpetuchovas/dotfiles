@@ -12,7 +12,6 @@ git clone --bare git@github.com:jpetuchovas/dotfiles.git .dotfiles.git
 git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME checkout
 exec $SHELL
 dotfiles config --local status.showUntrackedFiles no
-sh .vscode-extensions
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Fix issues with tmux on macOS:
