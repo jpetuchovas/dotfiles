@@ -13,17 +13,6 @@ git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME checkout
 exec $SHELL
 dotfiles config --local status.showUntrackedFiles no
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# Fix issues with tmux on macOS:
-# https://github.com/tmux/tmux/issues/3218
-# Related:
-# https://www.rockyourcode.com/til-how-to-fix-cannot-read-termcap-database-with-tmux-and-kitty-on-macos/
-# https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
-/*/*/Cellar/ncurses/6.4/bin/infocmp -x tmux-256color >tmux-256color.src
-sudo /usr/bin/tic -x tmux-256color.src
-
-# May also need to execute this fix for zsh:
-# https://github.com/zsh-users/zsh-completions/issues/433#issuecomment-815872839
 ```
 
 The `dotfiles` alias can be used to interact with the dotfiles repository.
