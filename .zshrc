@@ -79,6 +79,9 @@ export PATH="${HOME}/.docker/bin:${PATH}"
 
 export PATH="${HOME}/Dropbox/repos/scripts:${HOME}/bin:${PATH}"
 
+# Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
 export HOMEBREW_NO_ANALYTICS=1
 # Homebrew setup on M1 MacBook.
 if [[ $(uname -m) == 'arm64' ]]; then
