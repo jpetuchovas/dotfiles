@@ -1,0 +1,10 @@
+yabai -m config layout bsp
+yabai -m config mouse_modifier alt
+
+yabai -m rule --add app='^Calculator$' manage=off
+yabai -m rule --add app='^IntelliJ IDEA$' manage=off
+yabai -m rule --add app='^IntelliJ IDEA$' title="^$" manage=on
+yabai -m rule --add app='^JetBrains Toolbox$' manage=off
+yabai -m rule --add app="^System Information$" title='^$' manage=off
+yabai -m rule --add app='^System Preferences$' manage=off
+yabai -m rule --add app='^System Settings$' manage=off
