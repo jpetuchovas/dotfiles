@@ -44,4 +44,3 @@ alt + shift - x : yabai -m space --mirror x-axis
 
 # Balance the size of windows.
 alt + shift - 0 : yabai -m space --balance
-
