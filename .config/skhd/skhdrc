@@ -1,8 +1,8 @@
-# Change focus.
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+# Change focus. If on the border of a display, change focus to another display.
+alt - h : yabai -m window --focus west || yabai -m display --focus west
+alt - j : yabai -m window --focus south || yabai -m display --focus south
+alt - k : yabai -m window --focus north || yabai -m display --focus north
+alt - l : yabai -m window --focus east || yabai -m display --focus east
 
 # Move windows. If on the border of a display, move to another display.
 alt + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
@@ -23,3 +23,25 @@ alt + shift - 3 : yabai -m window --space 3
 alt + shift - 4 : yabai -m window --space 4
 alt + shift - 5 : yabai -m window --space 5
 alt + shift - 6 : yabai -m window --space 6
+alt + shift - 7 : yabai -m window --space 7
+alt + shift - 8 : yabai -m window --space 8
+alt + shift - 9 : yabai -m window --space 9
+
+# Cycle through windows in a stack.
+alt - p: yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+alt - n: yabai -m window --focus stack.next || yabai -m window --focus stack.first
+
+# Toggle floating mode for a window.
+alt + shift - space : yabai -m window --toggle float
+
+# Change layout.
+alt - e : yabai -m space --layout bsp
+alt - s : yabai -m space --layout stack
+
+# Flip along axes.
+alt + shift - y : yabai -m space --mirror y-axis
+alt + shift - x : yabai -m space --mirror x-axis
+
+# Balance the size of windows.
+alt + shift - 0 : yabai -m space --balance
+
