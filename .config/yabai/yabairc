@@ -3,6 +3,7 @@ yabai -m config layout bsp
 yabai -m rule --add app='^Calculator$' manage=off
 yabai -m rule --add app='^Digital Color Meter$' manage=off
 yabai -m rule --add app='^Finder$' title='^Copy$' manage=off
+yabai -m rule --add app='^Finder$' title='Info$' manage=off
 yabai -m rule --add app='^Finder$' title='^Trash$' manage=off
 yabai -m rule --add app='^Help Viewer$' manage=off
 yabai -m rule --add app='^IntelliJ IDEA$' manage=off
