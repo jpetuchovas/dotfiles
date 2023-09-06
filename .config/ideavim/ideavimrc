@@ -1,0 +1,10 @@
+source ~/.vimrc
+
+" D corresponds to macOS Cmd key.
+imap <D-S-p> <Action>(GotoAction)
+nmap <D-S-p> <Action>(GotoAction)
+vmap <D-S-p> <Action>(GotoAction)
+nmap <C-p> <Action>(GotoFile)
+" Fixes navigation history.
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
