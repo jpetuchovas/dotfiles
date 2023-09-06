@@ -17,8 +17,8 @@ alias vim=nvim
 bindkey -e
 
 # Navigate through commands in history as usual, or if the cursor is at the
-# last position of a inputted command, use the prefix up to the cursor position
-# for searching.
+# last position of an inputted command, use the prefix up to the cursor
+# position for searching.
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
