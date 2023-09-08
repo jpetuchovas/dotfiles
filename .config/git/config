@@ -14,7 +14,7 @@
   undo = reset --soft HEAD^
 
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/gitignore_global
 
 [diff]
   ignoreSubmodules = dirty
