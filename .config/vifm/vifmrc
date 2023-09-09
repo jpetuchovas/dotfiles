@@ -1,0 +1,18 @@
+let &vicmd = $EDITOR
+
+set syscalls
+
+set nofollowlinks
+
+set vimhelp
+
+set wildmenu
+set wildstyle=popup
+
+set number
+set relativenumber
+
+set incsearch
+set nohlsearch
+
+set scrolloff=4
