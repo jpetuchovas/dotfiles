@@ -6,5 +6,3 @@ bind-key g home
 bind-key G end
 bind-key ^U halfpageup
 bind-key ^D halfpagedown
-
-color listnormal_unread default default
