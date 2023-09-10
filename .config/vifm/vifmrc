@@ -45,6 +45,8 @@ filetype *.bz2 bunzip2 -k
 
 filetype *.gz gunzip -k
 
+colorscheme minimal
+
 only
 
 set dotfiles
