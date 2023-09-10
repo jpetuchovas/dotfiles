@@ -24,3 +24,5 @@ vim.opt.scrolloff = 4
 vim.opt.colorcolumn = "80"
 
 vim.opt.spelllang = "en_us,lt"
+
+vim.g.netrw_bufsettings = "noma nomod nonu nowrap ro nobl number relativenumber"
