@@ -59,7 +59,7 @@ command! FZFfind : set noquickview
                  \| if $FZF_PICK != ''
                  \|     execute 'goto' fnameescape($FZF_PICK)
                  \| endif
-nnoremap <space>ff :FZFfind<CR>
+nnoremap <C-p> :FZFfind<CR>
 
 colorscheme minimal
 
