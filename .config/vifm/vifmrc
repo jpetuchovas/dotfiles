@@ -54,6 +54,13 @@ nnoremap N Nzz
 " Go up the directory tree with a dash like in netrw.
 nnoremap - h
 
+command! FZFfind : set noquickview
+                 \| let $FZF_PICK = system('fd --type f --strip-cwd-prefix | fzf-tmux -p 80%% 2>/dev/tty')
+                 \| if $FZF_PICK != ''
+                 \|     execute 'goto' fnameescape($FZF_PICK)
+                 \| endif
+nnoremap <space>ff :FZFfind<CR>
+
 colorscheme minimal
 
 only
