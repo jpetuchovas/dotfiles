@@ -45,6 +45,15 @@ filetype *.bz2 bunzip2 -k
 
 filetype *.gz gunzip -k
 
+" Centers text to the middle of the screen when moving half page up or down.
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+" Centers text to the middle of the screen when searching.
+nnoremap n nzz
+nnoremap N Nzz
+" Go up the directory tree with a dash like in netrw.
+nnoremap - h
+
 colorscheme minimal
 
 only
