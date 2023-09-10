@@ -26,7 +26,7 @@ filetype {*.torrent},<application/x-bittorrent> open -a Transmission.app
 
 " Office files.
 filetype {*.doc,*.docx} open -a Pages.app
-filetype {*.xls,*.xlsx} open -a Numbers.app
+filetype {*.csv,*.xls,*.xlsx} sc-im,open -a Numbers.app,nvim
 filetype {*.ppt,*.pptx} open -a Keynote.app
 
 " Mount .dmg archives.
