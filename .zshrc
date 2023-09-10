@@ -88,6 +88,9 @@ if [[ $(uname -m) == 'arm64' ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Make fzf respect .gitignore.
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+
 # zsh-completions.
 FPATH=$HOME/.nix-profile/share/zsh/site-functions:$FPATH
 autoload -Uz compinit
