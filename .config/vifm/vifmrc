@@ -1,9 +1,55 @@
 let &vicmd = $EDITOR
 
-set syscalls
+filetype {*.pdf},<application/pdf> zathura %c %i,open -a Skim.app
 
+filetype {*.ps,*.eps,*.ps.gz},<application/postscript> zathura %c %i
+
+filetype {*.djvu},<image/vnd.djvu> zathura %c %i
+
+" Image.
+filetype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*> open -a Preview.app
+
+" Audio.
+filetype {*.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus,
+         \*.aac,*.mpga},<audio/*> open -a mpv
+
+" Video.
+filetype {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
+         \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
+         \*.as[fx],*.unknown_video},<video/*> open -a mpv
+
+" Web.
+filetype {*.xhtml,*.html,*.htm},<text/html> open,nvim
+
+" Torrent.
+filetype {*.torrent},<application/x-bittorrent> open -a Transmission.app
+
+" Office files.
+filetype {*.doc,*.docx} open -a Pages.app
+filetype {*.xls,*.xlsx} open -a Numbers.app
+filetype {*.ppt,*.pptx} open -a Keynote.app
+
+" Mount .dmg archives.
+filetype *.dmg open
+
+filetype {*.zip,*.jar,*.war,*.ear},<application/zip,application/java-archive>
+         \ unzip
+fileviewer *.zip,*.jar,*.war,*.ear unzip -l
+
+filetype {*.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz,*.tar.zst,
+         \*.tzst},<application/x-tar> tar vxf
+fileviewer {*.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz,*.tar.zst,
+           \*.tzst},<application/x-tar> tar tf
+
+filetype *.bz2 bunzip2 -k
+
+filetype *.gz gunzip -k
+
+only
+
+set dotfiles
 set nofollowlinks
-
+set syscalls
 set vimhelp
 
 set wildmenu
