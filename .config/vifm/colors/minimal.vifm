@@ -5,4 +5,4 @@ highlight Border ctermbg=default
 highlight TopLine cterm=none ctermfg=white ctermbg=default
 highlight TopLineSel cterm=none ctermfg=white ctermbg=default
 highlight StatusLine cterm=none ctermfg=white ctermbg=grey19
-highlight CmdLine ctermfg=white ctermbg=none
+highlight CmdLine ctermfg=white ctermbg=default
