@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+open "dict://$1"

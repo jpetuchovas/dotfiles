@@ -89,7 +89,7 @@ if [[ $(uname -m) == 'arm64' ]]; then
 fi
 
 # Make fzf respect .gitignore.
-export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+export FZF_DEFAULT_COMMAND='fd -t f --strip-cwd-prefix'
 
 # zsh-completions.
 FPATH=$HOME/.nix-profile/share/zsh/site-functions:$FPATH

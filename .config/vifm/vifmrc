@@ -1,13 +1,13 @@
 let &vicmd = $EDITOR
 
-filetype {*.pdf},<application/pdf> zathura %c %i,open -a Skim.app
+filetype {*.pdf},<application/pdf> zathura %c %i,open -a Skim
 
 filetype {*.ps,*.eps,*.ps.gz},<application/postscript> zathura %c %i
 
 filetype {*.djvu},<image/vnd.djvu> zathura %c %i
 
 " Image.
-filetype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*> open -a Preview.app
+filetype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*> open -a Preview
 
 " Audio.
 filetype {*.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus,
@@ -22,12 +22,12 @@ filetype {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 filetype {*.xhtml,*.html,*.htm},<text/html> open,nvim
 
 " Torrent.
-filetype {*.torrent},<application/x-bittorrent> open -a Transmission.app
+filetype {*.torrent},<application/x-bittorrent> open -a Transmission
 
 " Office files.
-filetype {*.doc,*.docx} open -a Pages.app
-filetype {*.csv,*.xls,*.xlsx} sc-im,open -a Numbers.app,nvim
-filetype {*.ppt,*.pptx} open -a Keynote.app
+filetype {*.doc,*.docx} open -a Pages
+filetype {*.csv,*.xls,*.xlsx} sc-im,open -a Numbers,nvim
+filetype {*.ppt,*.pptx} open -a Keynote
 
 " Mount .dmg archives.
 filetype *.dmg open

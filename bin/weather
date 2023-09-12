@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+open http://www.meteo.lt/lt/miestas?placeCode=Vilnius

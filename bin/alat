@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Set alarm at the given time.
+# Choose Script Editor alert style to be "Alerts" so that the banner stays
+# on the screen until dismissed. Also, uncheck "Show in Notification Center".
+date +%H:%M:%S
+sleep $(( $(date -j -f %H:%M:%S "$1:00" +%s) - $(date +%s) ))
+osascript -e 'display notification "'"$1"'" with title "Reached"'
+afplay /System/Library/Sounds/Purr.aiff
+date +%H:%M:%S

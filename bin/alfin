@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Used to set an alarm after a command finishes running, e.g:
+# sleep 1; alfin
+# Choose Script Editor alert style to be "Alerts" so that the banner stays
+# on the screen until dismissed. Also, uncheck "Show in Notification Center".
+osascript -e 'display notification "!" with title "Finished"'
+afplay /System/Library/Sounds/Ping.aiff
