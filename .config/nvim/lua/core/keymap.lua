@@ -35,3 +35,15 @@ vim.keymap.set(
   "<leader>s",
   [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 )
+
+-- Open the current line in GitHub.
+-- %:. refers to the relative path of the current file.
+-- <C-r>=line(".")<CR> gets the current line number.
+vim.keymap.set(
+  "n",
+  "<leader>gho",
+  ':!gh browse -c=$(git rev-parse HEAD) %:.:<C-r>=line(".")<CR><CR><CR>'
+)
+
+-- Copies the current buffer's directory to clipboard.
+vim.keymap.set("n", "cpd", ':let @+=expand("%:p:h")<CR>')
