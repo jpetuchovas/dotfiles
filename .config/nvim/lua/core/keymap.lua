@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+vim.keymap.set({"n", "v"}, "<leader>K", "K")
+
 vim.keymap.set("n", "<leader>fv", vim.cmd.Ex)
 
 -- Allows to move selected lines in visual mode.
