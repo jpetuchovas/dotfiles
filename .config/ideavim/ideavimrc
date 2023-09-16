@@ -1,4 +1,32 @@
-source ~/.vimrc
+let mapleader=" "
+
+set incsearch
+set number
+set relativenumber
+set scrolloff=4
+
+set commentary
+
+" Centers text to the middle of the screen when moving half page up or down.
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+" Centers text to the middle of the screen when searching.
+nmap n nzzzv
+nmap N Nzzzv
+
+" Pastes text without overwriting the last yank.
+xmap <leader>p "_dP
+" Deletes text without overwriting the last yank.
+nmap <leader>d "_d
+vmap <leader>d "_d
+
+" Copies to the clipboard.
+nmap <leader>y "+y
+vmap <leader>y "+y
+nmap <leader>Y "+Y
+
+nmap <leader>f <Action>(ShowReformatFileDialog)
+vmap <leader>f <Action>(ReformatCode)
 
 " D corresponds to macOS Cmd key.
 imap <D-S-p> <Action>(GotoAction)
