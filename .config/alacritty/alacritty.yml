@@ -32,6 +32,8 @@ colors:
     cyan:    '0x89b482'
     white:   '0xd4be98'
 
-# macOS workarounds.
 window:
+  padding:
+    x: 0
+  # macOS workaround.
   option_as_alt: Both

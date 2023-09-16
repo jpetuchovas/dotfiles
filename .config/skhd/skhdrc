@@ -34,6 +34,9 @@ alt - n: yabai -m window --focus stack.next || yabai -m window --focus stack.fir
 # Toggle floating mode for a window.
 alt + shift - space : yabai -m window --toggle float
 
+# Center the window.
+alt - c : yabai -m window --toggle float; yabai -m window --grid 1:6:1:0:4:1
+
 # Change layout.
 alt - e : yabai -m space --layout bsp
 alt - s : yabai -m space --layout stack

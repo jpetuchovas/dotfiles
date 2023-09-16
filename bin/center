@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Toggle Alacritty padding so that the text could be moved toward the center.
+sed -i '' -e 's/x: 0/x: 255/' -e 't' -e 's/x: 255/x: 0/' ~/.config/alacritty/alacritty.yml
