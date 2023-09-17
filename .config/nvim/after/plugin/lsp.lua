@@ -1,40 +1,14 @@
-local lsp = require("lsp-zero").preset({
-  float_border = "rounded",
-  call_servers = "local",
-  configure_diagnostics = true,
-  setup_servers_on_start = true,
-  set_lsp_keymaps = {
-    preserve_mappings = false,
-    omit = {},
-  },
-  manage_nvim_cmp = {
-    set_sources = "recommended",
-    set_basic_mappings = true,
-    set_extra_mappings = false,
-    use_luasnip = true,
-    set_format = true,
-    documentation_window = true,
-  },
+local lsp_zero = require("lsp-zero")
+
+lsp_zero.set_sign_icons({
+  error = "E",
+  warn = "W",
+  hint = "H",
+  info = "I",
 })
 
-lsp.ensure_installed({
-  "bashls",
-  "bufls",
-  "clangd",
-  "dockerls",
-  "eslint",
-  "gopls",
-  "jsonls",
-  "lua_ls",
-  "marksman",
-  "nil_ls",
-  "pyright",
-  "tsserver",
-  "yamlls",
-})
-
-lsp.on_attach(function(_, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+lsp_zero.on_attach(function(_, bufnr)
+  lsp_zero.default_keymaps({buffer = bufnr})
 
   local opts = {buffer = bufnr, remap = false}
   vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
@@ -43,19 +17,33 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
 end)
 
-lsp.set_sign_icons({
-  error = "E",
-  warn = "W",
-  hint = "H",
-  info = "I",
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    "bashls",
+    "bufls",
+    "clangd",
+    "dockerls",
+    "eslint",
+    "gopls",
+    "jsonls",
+    "lua_ls",
+    "marksman",
+    "pyright",
+    "tsserver",
+    "yamlls",
+  },
+  handlers = {
+    lsp_zero.default_setup,
+    lua_ls = function()
+      local lua_opts = lsp_zero.nvim_lua_ls()
+      require('lspconfig').lua_ls.setup(lua_opts)
+    end,
+  },
 })
 
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-
-lsp.setup()
-
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+local cmp_action = lsp_zero.cmp_action()
 
 cmp.setup({
   sources = {
