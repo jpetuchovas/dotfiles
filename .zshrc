@@ -76,7 +76,7 @@ PS2='%F{black}>%f '
 
 export N_PREFIX="$HOME/n";
 
-export PATH="${HOME}/Dropbox/repos/scripts:${HOME}/bin:${N_PREFIX}/bin:${PATH}"
+PATH="${HOME}/Dropbox/repos/scripts:${HOME}/bin:${N_PREFIX}/bin:${PATH}"
 
 export HOMEBREW_NO_ANALYTICS=1
 # Homebrew setup on M1 MacBook.
