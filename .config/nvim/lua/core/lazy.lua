@@ -59,7 +59,8 @@ local plugins = {
       {"L3MON4D3/LuaSnip"},
     }
   },
-  "jose-elias-alvarez/null-ls.nvim",
+  "mfussenegger/nvim-lint",
+  "stevearc/conform.nvim",
   {
     "scalameta/nvim-metals",
     dependencies = {

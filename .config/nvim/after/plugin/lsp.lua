@@ -17,7 +17,7 @@ lsp_zero.on_attach(function(_, bufnr)
   vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
 end)
 
-require('mason').setup({})
+require('mason').setup()
 require('mason-lspconfig').setup({
   ensure_installed = {
     "bashls",
@@ -61,58 +61,6 @@ cmp.setup({
   completion = {
     completeopt = "menu,menuone,noinsert",
   },
-})
-
-vim.diagnostic.config({virtual_text = true})
-
--- null-ls setup.
-local null_ls = require("null-ls")
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
-local filetypes_to_format_on_save = {
-  "python",
-  "javascript",
-  "javascriptreact",
-  "typescript",
-  "typescriptreact",
-}
-local function should_format(buffer_filetype)
-  for _, filetype in pairs(filetypes_to_format_on_save) do
-    if filetype == buffer_filetype then
-      return true
-    end
-  end
-
-  return false
-end
-
-null_ls.setup({
-  sources = {
-    null_ls.builtins.diagnostics.shellcheck,
-    null_ls.builtins.formatting.black,
-    null_ls.builtins.formatting.isort,
-    null_ls.builtins.formatting.prettier,
-    null_ls.builtins.formatting.shfmt,
-  },
-  -- Formats on save.
-  on_attach = function(client, bufnr)
-    if should_format(vim.bo[bufnr].filetype)
-        and client.supports_method("textDocument/formatting") then
-      vim.api.nvim_clear_autocmds({group = augroup, buffer = bufnr})
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        group = augroup,
-        buffer = bufnr,
-        callback = function()
-          vim.lsp.buf.format({
-            bufnr = bufnr,
-            filter = function(clnt)
-              return clnt.name == "null-ls"
-            end,
-          })
-        end,
-      })
-    end
-  end,
 })
 
 -- nvim-metals for Scala setup.
