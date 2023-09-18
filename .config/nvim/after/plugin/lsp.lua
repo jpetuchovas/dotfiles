@@ -29,6 +29,7 @@ require('mason-lspconfig').setup({
     "jsonls",
     "lua_ls",
     "marksman",
+    "nil_ls",
     "pyright",
     "tsserver",
     "yamlls",
