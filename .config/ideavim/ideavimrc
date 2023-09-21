@@ -7,6 +7,10 @@ set scrolloff=4
 
 set commentary
 
+" Allows to move selected lines in visual mode.
+vmap J <Action>(MoveLineDown)
+vmap K <Action>(MoveLineUp)
+
 " Centers text to the middle of the screen when moving half page up or down.
 nmap <C-d> <C-d>zz
 nmap <C-u> <C-u>zz
@@ -25,14 +29,43 @@ nmap <leader>y "+y
 vmap <leader>y "+y
 nmap <leader>Y "+Y
 
+nmap <leader>gho <Action>(Github.Open.In.Browser)
+
+nmap <leader>gs <Action>(ActivateCommitToolWindow)
+
 nmap <leader>f <Action>(ShowReformatFileDialog)
 vmap <leader>f <Action>(ReformatCode)
+
+nmap <leader>rn <Action>(RenameElement)
+imap <C-k> <Action>(ParameterInfo)
+
+nmap <leader>zz <Action>(ToggleDistractionFreeMode)
 
 " D corresponds to macOS Cmd key.
 imap <D-S-p> <Action>(GotoAction)
 nmap <D-S-p> <Action>(GotoAction)
 vmap <D-S-p> <Action>(GotoAction)
 nmap <C-p> <Action>(GotoFile)
+
 " Fixes navigation history.
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
+
+" Debugger.
+nmap <leader>ba <Action>(ToggleLineBreakpoint)
+nmap <leader>bc <Action>(Resume)
+nmap <leader>bj <Action>(StepInto)
+nmap <leader>bk <Action>(StepOut)
+nmap <leader>bl <Action>(StepOver)
+nmap <leader>b. <Action>(RunToCursor)
+nmap <leader>bL <Action>(ViewBreakpoints)
+nmap <leader>bX <Action>(Stop)
+
+" Harpoon.
+nmap <leader>a <Action>(AddToHarpoon)
+nmap <C-e> <Action>(ShowHarpoon)
+
+nmap <C-h> <Action>(GotoHarpoon1)
+nmap <C-n> <Action>(GotoHarpoon2)
+nmap <C-t> <Action>(GotoHarpoon3)
+nmap <C-s> <Action>(GotoHarpoon4)
