@@ -7,10 +7,6 @@ set scrolloff=4
 
 set commentary
 
-" Allows to move selected lines in visual mode.
-vmap J <Action>(MoveLineDown)
-vmap K <Action>(MoveLineUp)
-
 " Centers text to the middle of the screen when moving half page up or down.
 nmap <C-d> <C-d>zz
 nmap <C-u> <C-u>zz
@@ -63,9 +59,9 @@ nmap <leader>bX <Action>(Stop)
 
 " Harpoon.
 nmap <leader>a <Action>(AddToHarpoon)
-nmap <C-e> <Action>(ShowHarpoon)
+nmap <C-h> <Action>(ShowHarpoon)
 
-nmap <C-h> <Action>(GotoHarpoon1)
-nmap <C-n> <Action>(GotoHarpoon2)
-nmap <C-t> <Action>(GotoHarpoon3)
-nmap <C-s> <Action>(GotoHarpoon4)
+nmap <leader>1 <Action>(GotoHarpoon1)
+nmap <leader>2  <Action>(GotoHarpoon2)
+nmap <leader>3  <Action>(GotoHarpoon3)
+nmap <leader>4  <Action>(GotoHarpoon4)
