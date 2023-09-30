@@ -27,9 +27,12 @@ alt + shift - 7 : yabai -m window --space 7
 alt + shift - 8 : yabai -m window --space 8
 alt + shift - 9 : yabai -m window --space 9
 
-# Cycle through windows in a stack.
-alt - p: yabai -m window --focus stack.prev || yabai -m window --focus stack.last
-alt - n: yabai -m window --focus stack.next || yabai -m window --focus stack.first
+# Cycle through windows in the current space.
+alt - p: yabai -m window --focus "$(yabai -m query --windows --space | jq -re "sort_by(.frame.x, .frame.y, .id) | map(select(.\"is-visible\")) | nth(index(map(select(.\"has-focus\"))) - 1).id")"
+# Instead of simply adding 1 to the focused window's index, the array is
+# reversed and the index is recuded by 1 to easily solve wraparound problems
+# because [-1] refers to the last element of the array.
+alt - n: yabai -m window --focus "$(yabai -m query --windows --space | jq -re "sort_by(.frame.x, .frame.y, .id) | map(select(.\"is-visible\")) | reverse | nth(index(map(select(.\"has-focus\"))) - 1).id")"
 
 # Toggle floating mode for a window.
 alt + shift - space : yabai -m window --toggle float
