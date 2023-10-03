@@ -7,13 +7,6 @@ set scrolloff=4
 
 set commentary
 
-" Centers text to the middle of the screen when moving half page up or down.
-nmap <C-d> <C-d>zz
-nmap <C-u> <C-u>zz
-" Centers text to the middle of the screen when searching.
-nmap n nzzzv
-nmap N Nzzzv
-
 " Pastes text without overwriting the last yank.
 xmap <leader>p "_dP
 " Deletes text without overwriting the last yank.
@@ -26,8 +19,6 @@ vmap <leader>y "+y
 nmap <leader>Y "+Y
 
 nmap <leader>gho <Action>(Github.Open.In.Browser)
-
-nmap <leader>gs <Action>(ActivateCommitToolWindow)
 
 nmap <leader>f <Action>(ShowReformatFileDialog)
 vmap <leader>f <Action>(ReformatCode)
@@ -62,6 +53,6 @@ nmap <leader>a <Action>(AddToHarpoon)
 nmap <C-h> <Action>(ShowHarpoon)
 
 nmap <leader>1 <Action>(GotoHarpoon1)
-nmap <leader>2  <Action>(GotoHarpoon2)
-nmap <leader>3  <Action>(GotoHarpoon3)
-nmap <leader>4  <Action>(GotoHarpoon4)
+nmap <leader>2 <Action>(GotoHarpoon2)
+nmap <leader>3 <Action>(GotoHarpoon3)
+nmap <leader>4 <Action>(GotoHarpoon4)

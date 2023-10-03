@@ -4,13 +4,6 @@ vim.keymap.set({"n", "v"}, "<leader>K", "K")
 
 vim.keymap.set("n", "<leader>fv", vim.cmd.Ex)
 
--- Centers text to the middle of the screen when moving half page up or down.
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
--- Centers text to the middle of the screen when searching.
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-
 -- Pastes text without overwriting the last yank.
 vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Deletes text without overwriting the last yank.
