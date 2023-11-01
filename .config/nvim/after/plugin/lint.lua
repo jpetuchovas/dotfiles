@@ -1,6 +1,7 @@
 local lint = require("lint")
 
 lint.linters_by_ft = {
+  python = {"cspell"},
   sh = {"shellcheck"},
   yaml = {"yamllint"},
 }
