@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-open http://www.meteo.lt/lt/miestas?placeCode=Vilnius
+open https://www.meteo.lt/prognozes/lietuvos-miestai/?area=vilnius
