@@ -7,6 +7,7 @@ require("nvim-treesitter.configs").setup({
     "gitcommit",
     "gitignore",
     "go",
+    "java",
     "javascript",
     "json",
     "latex",
