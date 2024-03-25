@@ -69,7 +69,13 @@ local plugins = {
     },
   },
 
-  {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"}},
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
+  },
   "theHamsta/nvim-dap-virtual-text",
   "mfussenegger/nvim-dap-python",
   {"mxsdev/nvim-dap-vscode-js", dependencies = {"mfussenegger/nvim-dap"}},
