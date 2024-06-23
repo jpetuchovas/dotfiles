@@ -16,3 +16,5 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 The `dotfiles` alias can be used to interact with the dotfiles repository.
+
+To install tmux plugins, press `Ctrl+b` and `I` (capital i) inside tmux.
