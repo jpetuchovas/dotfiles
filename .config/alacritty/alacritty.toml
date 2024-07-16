@@ -25,6 +25,9 @@ yellow = "0xd8a657"
 background = "0x282828"
 foreground = "0xd4be98"
 
+[env]
+TERM = "alacritty"
+
 [font]
 size = 20.0
 
