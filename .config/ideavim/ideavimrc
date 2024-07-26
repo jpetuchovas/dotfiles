@@ -3,6 +3,7 @@ let mapleader=" "
 set incsearch
 set number
 set relativenumber
+set ignorecase
 set scrolloff=2
 
 set commentary
