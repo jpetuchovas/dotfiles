@@ -8,6 +8,10 @@ set scrolloff=2
 
 set commentary
 
+" Fixes issues with the search and replace command (:s%) command.
+" Issue: https://youtrack.jetbrains.com/issue/VIM-2998
+set noexcommandannotation
+
 " Pastes text without overwriting the last yank.
 xmap <leader>p "_dP
 " Deletes text without overwriting the last yank.
