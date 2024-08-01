@@ -8,7 +8,7 @@ set scrolloff=2
 
 set commentary
 
-" Fixes issues with the search and replace command (:s%) command.
+" Fixes issues with the search and replace command (:s%).
 " Issue: https://youtrack.jetbrains.com/issue/VIM-2998
 set noexcommandannotation
 
