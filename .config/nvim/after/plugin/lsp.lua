@@ -31,7 +31,7 @@ require('mason-lspconfig').setup({
     "marksman",
     "nil_ls",
     "pyright",
-    "tsserver",
+    "ts_ls",
     "yamlls",
   },
   handlers = {
