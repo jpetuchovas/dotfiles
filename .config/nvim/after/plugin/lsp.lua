@@ -1,13 +1,17 @@
 local lsp_zero = require("lsp-zero")
 
-lsp_zero.set_sign_icons({
-  error = "E",
-  warn = "W",
-  hint = "H",
-  info = "I",
+lsp_zero.ui({
+  sign_text = {
+    error = "E",
+    warn = "W",
+    hint = "H",
+    info = "I",
+  }
 })
 
-lsp_zero.on_attach(function(_, bufnr)
+local cmp_nvim_lsp_default_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+local lsp_attach = function(_, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 
   local opts = {buffer = bufnr, remap = false}
@@ -15,7 +19,15 @@ lsp_zero.on_attach(function(_, bufnr)
   vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
   vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-end)
+end
+
+lsp_zero.extend_lspconfig({
+  capabilities = cmp_nvim_lsp_default_capabilities,
+  lsp_attach = lsp_attach,
+  float_border = "rounded",
+  sign_text = true,
+})
+
 
 require('mason').setup()
 require('mason-lspconfig').setup({
@@ -52,12 +64,17 @@ cmp.setup({
     {name = "nvim_lsp", keyword_length = 2},
     {name = "buffer", keyword_length = 2},
   },
-  mapping = {
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
     ["<CR>"] = cmp.mapping.confirm({select = false}),
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<Tab>"] = cmp_action.tab_complete(),
-    ["<S-Tab>"] = cmp_action.select_prev_or_fallback(),
-  },
+    ["<S-Tab>"] = cmp.mapping.select_prev_item({behavior = "select"}),
+  }),
   preselect = "item",
   completion = {
     completeopt = "menu,menuone,noinsert",
@@ -71,7 +88,7 @@ metals_config.settings = {
   showImplicitArguments = true,
 }
 metals_config.init_options.statusBarProvider = "on"
-metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+metals_config.capabilities = cmp_nvim_lsp_default_capabilities
 
 local dap = require("dap")
 dap.configurations.scala = {
