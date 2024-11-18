@@ -33,7 +33,6 @@ require('mason').setup()
 require('mason-lspconfig').setup({
   ensure_installed = {
     "bashls",
-    "bufls",
     "clangd",
     "dockerls",
     "eslint",
@@ -42,6 +41,7 @@ require('mason-lspconfig').setup({
     "lua_ls",
     "marksman",
     "nil_ls",
+    "pbls",
     "pyright",
     "ts_ls",
     "yamlls",
