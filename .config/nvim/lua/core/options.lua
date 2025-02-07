@@ -9,7 +9,6 @@ vim.opt.tabstop = 2
 vim.opt.smartindent = true
 
 vim.opt.hlsearch = false
-vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
 
