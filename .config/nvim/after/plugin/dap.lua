@@ -41,7 +41,7 @@ dap.listeners.before.event_exited["dapui_config"] = dapui.close
 require("nvim-dap-virtual-text").setup()
 
 require("dap-python").setup(
-  "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+  "~/.pyenv/shims/python"
 )
 
 require("dap-vscode-js").setup({
