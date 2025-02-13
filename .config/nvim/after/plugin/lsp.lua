@@ -9,7 +9,7 @@ lsp_zero.ui({
   }
 })
 
-local cmp_nvim_lsp_default_capabilities = require('cmp_nvim_lsp').default_capabilities()
+local cmp_nvim_lsp_default_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lsp_attach = function(_, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
@@ -29,8 +29,8 @@ lsp_zero.extend_lspconfig({
 })
 
 
-require('mason').setup()
-require('mason-lspconfig').setup({
+require("mason").setup()
+require("mason-lspconfig").setup({
   ensure_installed = {
     "bashls",
     "clangd",
@@ -50,12 +50,21 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
     lua_ls = function()
       local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
+      require("lspconfig").lua_ls.setup(lua_opts)
     end,
+    pyright = function()
+      require("lspconfig").pyright.setup({
+        settings = {
+          python = {
+            pythonPath = os.getenv("HOME") .. ".pyenv/shims/python"
+          }
+        }
+      })
+    end
   },
 })
 
-local cmp = require('cmp')
+local cmp = require("cmp")
 local cmp_action = lsp_zero.cmp_action()
 
 cmp.setup({
@@ -66,7 +75,7 @@ cmp.setup({
   },
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      require("luasnip").lsp_expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -121,9 +130,9 @@ metals_config.on_attach = function(_, bufnr)
   vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
   vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-  vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
-  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+  vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
+  vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+  vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
   metals.setup_dap()
 end
