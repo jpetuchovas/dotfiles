@@ -52,15 +52,6 @@ require("mason-lspconfig").setup({
       local lua_opts = lsp_zero.nvim_lua_ls()
       require("lspconfig").lua_ls.setup(lua_opts)
     end,
-    pyright = function()
-      require("lspconfig").pyright.setup({
-        settings = {
-          python = {
-            pythonPath = os.getenv("HOME") .. ".pyenv/shims/python"
-          }
-        }
-      })
-    end,
   },
 })
 
