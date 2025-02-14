@@ -1,3 +1,4 @@
+require("core.env")
 require("core.formatting")
 require("core.keymap")
 require("core.options")
