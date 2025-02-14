@@ -12,6 +12,9 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 alias grep='grep --color=auto'
 alias ll='ls -lah'
 alias ls='ls -G'
+# The space at the end causes the next word to be checked for alias
+# expansion. Makes it so `sudo vim` launches Neovim instead of Vim.
+alias sudo='sudo '
 alias vim=nvim
 
 bindkey -e
