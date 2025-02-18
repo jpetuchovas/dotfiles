@@ -82,7 +82,10 @@ export N_PREFIX="$HOME/n";
 PATH="${HOME}/Dropbox/repos/scripts:${HOME}/bin:${N_PREFIX}/bin:${PATH}"
 
 # Include man search paths missing from Nix-installed man and available by
-# default on macOS.
+# default on macOS. Compare:
+# ~/.nix-profile/bin/manpath
+# with
+# /usr/bin/manpath
 export MANPATH=":/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man:/Library/Developer/CommandLineTools/usr/share/man"
 
 export HOMEBREW_NO_ANALYTICS=1
