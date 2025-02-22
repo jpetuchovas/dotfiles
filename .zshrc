@@ -17,6 +17,13 @@ alias ls='ls -G'
 alias sudo='sudo '
 alias vim=nvim
 
+# Make an equivalent command to bash's help command.
+# Based on zshcontrib manpage.
+unalias run-help
+autoload run-help
+alias help=run-help
+HELPDIR="/run/current-system/sw/share/zsh/$ZSH_VERSION/help"
+
 bindkey -e
 
 # Navigate through commands in history as usual, or if the cursor is at the
