@@ -39,6 +39,10 @@ style = "Medium"
 [general]
 live_config_reload = true
 
+[terminal.shell]
+program = "zsh"
+args = ["-l", "-c", "tmux new-session -A -s 0"]
+
 [window]
 option_as_alt = "Both"
 
