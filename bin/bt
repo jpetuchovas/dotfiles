@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # %/ removes the trailing forward slash if it exists.
 directory="${1%/}"
-find "$directory" | entr -cs "bazel test //$directory/..."
+while true
+do
+  find "$directory" | entr -cds "bazel test //$directory/..."
+done
