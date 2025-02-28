@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 # %/ removes the trailing forward slash if it exists.
 directory="${1%/}"
-find "$directory" | entr -cds "bazel test //$directory/..."
+trap 'exit 0' SIGINT SIGTERM
+# A while loop is used because the -d flag causes entr to exit if new files are
+# added.
+while true
+do
+  find "$directory" | entr -cds "bazel test //$directory/..."
+done
