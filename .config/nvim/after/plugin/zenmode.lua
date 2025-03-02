@@ -1,9 +1,5 @@
 local zenmode = require("zen-mode")
 
-zenmode.setup({
-  window = {
-    width = 94,
-  },
-})
+zenmode.setup()
 
 vim.keymap.set("n", "<leader>zz", zenmode.toggle)
