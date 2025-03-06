@@ -19,6 +19,7 @@ local lsp_attach = function(_, bufnr)
   vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
   vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
+  vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
 end
 
 lsp_zero.extend_lspconfig({
