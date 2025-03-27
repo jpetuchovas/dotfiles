@@ -107,6 +107,8 @@ enable_zsh_autosuggestions() {
 
 enable_zsh_autosuggestions
 
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
