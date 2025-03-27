@@ -81,9 +81,7 @@ setopt PROMPT_SUBST
 PS1='%F{blue}%(5~|%-1~/.../%3~|%4~)%F{yellow}${git_branch}%F{red}${git_dirty}%F{black}$%f '
 PS2='%F{black}>%f '
 
-export N_PREFIX="$HOME/n";
-
-PATH="${HOME}/Dropbox/repos/scripts:${HOME}/bin:${N_PREFIX}/bin:${PATH}"
+PATH="${HOME}/Dropbox/repos/scripts:${HOME}/bin:${PATH}"
 
 export HOMEBREW_NO_ANALYTICS=1
 # Homebrew setup on M1 MacBook.
