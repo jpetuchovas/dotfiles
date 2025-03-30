@@ -39,7 +39,6 @@ require("mason-lspconfig").setup({
     "eslint",
     "gopls",
     "jsonls",
-    "lua_ls",
     "marksman",
     "nil_ls",
     "pbls",
