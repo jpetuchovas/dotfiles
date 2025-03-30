@@ -1,6 +1,6 @@
 require("core.env")
 require("core.formatting")
 require("core.keymap")
-require("core.options")
-require("core.lsp")
 require("core.lazy")
+require("core.lsp")
+require("core.options")
