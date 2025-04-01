@@ -1,34 +1,33 @@
-local lsp_zero = require("lsp-zero")
-
-lsp_zero.ui({
-  sign_text = {
-    error = "E",
-    warn = "W",
-    hint = "H",
-    info = "I",
-  }
-})
-
 local cmp_nvim_lsp_default_capabilities = require("cmp_nvim_lsp").default_capabilities()
+local lspconfig_defaults = require("lspconfig").util.default_config
+lspconfig_defaults.capabilities = vim.tbl_deep_extend(
+  "force",
+  lspconfig_defaults.capabilities,
+  cmp_nvim_lsp_default_capabilities
+)
 
-local lsp_attach = function(_, bufnr)
-  lsp_zero.default_keymaps({buffer = bufnr})
+local float_border = "rounded"
 
-  local opts = {buffer = bufnr, remap = false}
-  vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
-  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-  vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-  vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-  vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
-end
-
-lsp_zero.extend_lspconfig({
-  capabilities = cmp_nvim_lsp_default_capabilities,
-  lsp_attach = lsp_attach,
-  float_border = "rounded",
-  sign_text = true,
+vim.api.nvim_create_autocmd("LspAttach", {
+  desc = "LSP actions",
+  callback = function(event)
+    local opts = {buffer = event.buf, remap = false}
+    vim.keymap.set("n", "K", function() vim.lsp.buf.hover({border = float_border}) end, opts)
+    vim.keymap.set("n", "gs", function() vim.lsp.buf.signature_help({border = float_border}) end, opts)
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', 'go', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+    vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help({border = float_border}) end, opts)
+    vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
+  end,
 })
 
+vim.diagnostic.config({float = {border = float_border}})
 
 require("mason").setup()
 require("mason-lspconfig").setup({
@@ -39,6 +38,7 @@ require("mason-lspconfig").setup({
     "eslint",
     "gopls",
     "jsonls",
+    "lua_ls",
     "marksman",
     "nil_ls",
     "pbls",
@@ -47,16 +47,35 @@ require("mason-lspconfig").setup({
     "yamlls",
   },
   handlers = {
-    lsp_zero.default_setup,
+    function(server_name)
+      require("lspconfig")[server_name].setup({
+        capabilities = cmp_nvim_lsp_default_capabilities,
+      })
+    end,
     lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require("lspconfig").lua_ls.setup(lua_opts)
+      require("lspconfig").lua_ls.setup({
+        capabilities = cmp_nvim_lsp_default_capabilities,
+        settings = {
+          Lua = {
+            runtime = {
+              version = "LuaJIT"
+            },
+            diagnostics = {
+              globals = {"vim"},
+            },
+            workspace = {
+              library = {
+                vim.env.VIMRUNTIME,
+              }
+            }
+          }
+        }
+      })
     end,
   },
 })
 
 local cmp = require("cmp")
-local cmp_action = lsp_zero.cmp_action()
 
 cmp.setup({
   sources = {
@@ -72,7 +91,19 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ["<CR>"] = cmp.mapping.confirm({select = false}),
     ["<C-Space>"] = cmp.mapping.complete(),
-    ["<Tab>"] = cmp_action.tab_complete(),
+    -- Tab complete function taken from:
+    -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/df80878a8ac6f855a6290389340fd089870ea7a5/lua/lsp-zero/cmp-mapping.lua#L28
+    ["<Tab>"] = cmp.mapping(function(fallback)
+        local col = vim.fn.col('.') - 1
+
+        if cmp.visible() then
+          cmp.select_next_item()
+        elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+          fallback()
+        else
+          cmp.complete()
+        end
+      end, {'i', 's'}),
     ["<S-Tab>"] = cmp.mapping.select_prev_item({behavior = "select"}),
   }),
   preselect = "item",
