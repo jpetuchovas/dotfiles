@@ -9,7 +9,6 @@ lspconfig_defaults.capabilities = vim.tbl_deep_extend(
 local float_border = "rounded"
 
 vim.api.nvim_create_autocmd("LspAttach", {
-  desc = "LSP actions",
   callback = function(event)
     local opts = {buffer = event.buf, remap = false}
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover({border = float_border}) end, opts)
