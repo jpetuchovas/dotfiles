@@ -12,21 +12,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(event)
     local opts = {buffer = event.buf, remap = false}
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover({border = float_border}) end, opts)
-    vim.keymap.set("n", "gs", function() vim.lsp.buf.signature_help({border = float_border}) end, opts)
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-    vim.keymap.set("n", "go", vim.lsp.buf.type_definition, opts)
-    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-    vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
-    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-    vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help({border = float_border}) end, opts)
-    vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
+    vim.keymap.set("i", "<C-s>", function() vim.lsp.buf.signature_help({border = float_border}) end, opts)
   end,
 })
 
-vim.diagnostic.config({float = {border = float_border}})
+vim.diagnostic.config({float = {border = float_border}, virtual_text = true})
 
 require("mason").setup()
 require("mason-lspconfig").setup({
@@ -93,16 +83,16 @@ cmp.setup({
     -- Tab complete function taken from:
     -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/df80878a8ac6f855a6290389340fd089870ea7a5/lua/lsp-zero/cmp-mapping.lua#L28
     ["<Tab>"] = cmp.mapping(function(fallback)
-        local col = vim.fn.col('.') - 1
+        local col = vim.fn.col(".") - 1
 
         if cmp.visible() then
           cmp.select_next_item()
-        elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        elseif col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
           fallback()
         else
           cmp.complete()
         end
-      end, {'i', 's'}),
+      end, {"i", "s"}),
     ["<S-Tab>"] = cmp.mapping.select_prev_item({behavior = "select"}),
   }),
   preselect = "item",
@@ -139,22 +129,7 @@ dap.configurations.scala = {
     },
   },
 }
-metals_config.on_attach = function(_, bufnr)
-  local opts = {buffer = bufnr, remap = false}
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-  vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-  vim.keymap.set("n", "go", vim.lsp.buf.type_definition, opts)
-  vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-  vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
-  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-  vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-  vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-  vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-  vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-
+metals_config.on_attach = function(_, _)
   metals.setup_dap()
 end
 

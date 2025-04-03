@@ -27,8 +27,8 @@ nmap <leader>gho <Action>(Github.Open.In.Browser)
 nmap <leader>f <Action>(ShowReformatFileDialog)
 vmap <leader>f <Action>(ReformatCode)
 
-nmap <leader>rn <Action>(RenameElement)
-imap <C-k> <Action>(ParameterInfo)
+nmap grn <Action>(RenameElement)
+imap <C-s> <Action>(ParameterInfo)
 
 nmap <leader>zz <Action>(ToggleDistractionFreeMode)
 
