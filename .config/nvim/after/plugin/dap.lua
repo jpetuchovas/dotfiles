@@ -40,16 +40,15 @@ dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
 require("nvim-dap-virtual-text").setup()
 
-require("dap-python").setup(
-  "~/.pyenv/shims/python"
-)
+require("dap-python").setup("~/.pyenv/shims/python")
 
 require("dap-vscode-js").setup({
-  debugger_path = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/js-debug-adapter",
-  adapters = {"pwa-node"},
+  debugger_path = os.getenv("HOME")
+    .. "/.local/share/nvim/mason/packages/js-debug-adapter",
+  adapters = { "pwa-node" },
 })
 
-for _, language in pairs({"typescript", "javascript"}) do
+for _, language in pairs({ "typescript", "javascript" }) do
   require("dap").configurations[language] = {
     {
       type = "pwa-node",

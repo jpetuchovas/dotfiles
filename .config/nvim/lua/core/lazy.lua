@@ -6,18 +6,18 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate"
+    build = ":TSUpdate",
   },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
-    dependencies = {"nvim-treesitter/nvim-treesitter"},
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
   "nvim-treesitter/playground",
 
   {
     "nvim-telescope/telescope.nvim",
     version = "*",
-    dependencies = {"nvim-lua/plenary.nvim"}
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
@@ -68,7 +68,7 @@ local plugins = {
   },
   "theHamsta/nvim-dap-virtual-text",
   "mfussenegger/nvim-dap-python",
-  {"mxsdev/nvim-dap-vscode-js", dependencies = {"mfussenegger/nvim-dap"}},
+  { "mxsdev/nvim-dap-vscode-js", dependencies = { "mfussenegger/nvim-dap" } },
 
   "folke/zen-mode.nvim",
 }
@@ -95,7 +95,14 @@ local opts = {
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  local out = vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "--branch=stable",
+    lazyrepo,
+    lazypath,
+  })
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },

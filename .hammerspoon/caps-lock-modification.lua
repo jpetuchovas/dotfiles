@@ -1,5 +1,7 @@
 -- Toggle caps lock
-hs.hotkey.bind({"ctrl", "cmd", "alt"}, "P", function() hs.hid.capslock.toggle() end)
+hs.hotkey.bind({ "ctrl", "cmd", "alt" }, "P", function()
+  hs.hid.capslock.toggle()
+end)
 
 -- Taken from Get TJ Miller's post:
 -- https://medium.com/@sixlive/a-more-useful-caps-lock-15d6e0641e0b
@@ -31,7 +33,7 @@ control_handler = function(evt)
   return false
 end
 
-control_tap = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, control_handler)
+control_tap = hs.eventtap.new({ hs.eventtap.event.types.flagsChanged }, control_handler)
 control_tap:start()
 
 other_handler = function(evt)
@@ -39,5 +41,5 @@ other_handler = function(evt)
   return false
 end
 
-other_tap = hs.eventtap.new({hs.eventtap.event.types.keyDown}, other_handler)
+other_tap = hs.eventtap.new({ hs.eventtap.event.types.keyDown }, other_handler)
 other_tap:start()
