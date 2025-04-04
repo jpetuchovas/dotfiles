@@ -2,6 +2,7 @@ local conform = require("conform")
 
 conform.setup({
   formatters_by_ft = {
+    lua = { "stylua" },
     python = {
       "isort",
       "black",
@@ -12,6 +13,6 @@ conform.setup({
   },
 })
 
-vim.keymap.set({"n", "v"}, "<leader>f", function()
-  conform.format({lsp_fallback = true})
+vim.keymap.set({ "n", "v" }, "<leader>f", function()
+  conform.format({ lsp_fallback = true })
 end)
