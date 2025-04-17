@@ -114,7 +114,7 @@ metals_config.settings = {
   showImplicitArguments = true,
   useGlobalExecutable = true,
 }
-metals_config.init_options.statusBarProvider = "on"
+metals_config.init_options.statusBarProvider = "off"
 metals_config.capabilities = cmp_nvim_lsp_default_capabilities
 
 local dap = require("dap")

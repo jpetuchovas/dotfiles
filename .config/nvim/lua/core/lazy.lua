@@ -42,6 +42,7 @@ local plugins = {
     end,
   },
   "williamboman/mason-lspconfig.nvim",
+  "j-hui/fidget.nvim",
 
   -- Autocompletion.
   "hrsh7th/nvim-cmp",
@@ -54,8 +55,8 @@ local plugins = {
   {
     "scalameta/nvim-metals",
     dependencies = {
-      "nvim-lua/plenary.nvim",
       "mfussenegger/nvim-dap",
+      "nvim-lua/plenary.nvim",
     },
   },
 
