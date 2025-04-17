@@ -112,6 +112,7 @@ local metals = require("metals")
 local metals_config = metals.bare_config()
 metals_config.settings = {
   showImplicitArguments = true,
+  useGlobalExecutable = true,
 }
 metals_config.init_options.statusBarProvider = "on"
 metals_config.capabilities = cmp_nvim_lsp_default_capabilities
