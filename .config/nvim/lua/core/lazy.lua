@@ -41,7 +41,6 @@ local plugins = {
       pcall(vim.cmd, "MasonUpdate")
     end,
   },
-  "williamboman/mason-lspconfig.nvim",
   "j-hui/fidget.nvim",
 
   -- Autocompletion.

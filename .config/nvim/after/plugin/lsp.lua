@@ -23,50 +23,45 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.diagnostic.config({ float = { border = float_border }, virtual_text = true })
 
 require("mason").setup()
-require("mason-lspconfig").setup({
-  ensure_installed = {
-    "bashls",
-    "clangd",
-    "dockerls",
-    "eslint",
-    "gopls",
-    "jsonls",
-    "lua_ls",
-    "marksman",
-    "nil_ls",
-    "pbls",
-    "pyright",
-    "ts_ls",
-    "yamlls",
-  },
-  handlers = {
-    function(server_name)
-      require("lspconfig")[server_name].setup({
-        capabilities = cmp_nvim_lsp_default_capabilities,
-      })
-    end,
-    lua_ls = function()
-      require("lspconfig").lua_ls.setup({
-        capabilities = cmp_nvim_lsp_default_capabilities,
-        settings = {
-          Lua = {
-            runtime = {
-              version = "LuaJIT",
-            },
-            diagnostics = {
-              globals = { "vim" },
-            },
-            workspace = {
-              checkThirdParty = false,
-              library = {
-                vim.env.VIMRUNTIME,
-                "${3rd}/luv/library",
-              },
-            },
-          },
+
+local lspconfig = require("lspconfig")
+for _, server_name in pairs({
+  "bashls",
+  "clangd",
+  "dockerls",
+  "eslint",
+  "gopls",
+  "jsonls",
+  "marksman",
+  "nil_ls",
+  "pbls",
+  "pyright",
+  "ts_ls",
+  "yamlls",
+}) do
+  lspconfig[server_name].setup({
+    capabilities = cmp_nvim_lsp_default_capabilities,
+  })
+end
+
+lspconfig.lua_ls.setup({
+  capabilities = cmp_nvim_lsp_default_capabilities,
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME,
+          "${3rd}/luv/library",
         },
-      })
-    end,
+      },
+    },
   },
 })
 
