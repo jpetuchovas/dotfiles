@@ -24,7 +24,6 @@ vim.diagnostic.config({ float = { border = float_border }, virtual_text = true }
 
 require("mason").setup()
 
-local lspconfig = require("lspconfig")
 for _, server_name in pairs({
   "bashls",
   "clangd",
@@ -39,12 +38,13 @@ for _, server_name in pairs({
   "ts_ls",
   "yamlls",
 }) do
-  lspconfig[server_name].setup({
+  vim.lsp.config(server_name, {
     capabilities = cmp_nvim_lsp_default_capabilities,
   })
+  vim.lsp.enable(server_name)
 end
 
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
   capabilities = cmp_nvim_lsp_default_capabilities,
   settings = {
     Lua = {
@@ -64,6 +64,7 @@ lspconfig.lua_ls.setup({
     },
   },
 })
+vim.lsp.enable("lua_ls")
 
 local cmp = require("cmp")
 
