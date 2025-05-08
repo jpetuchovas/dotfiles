@@ -22,10 +22,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 vim.diagnostic.config({ float = { border = float_border }, virtual_text = true })
 
-require("mason").setup()
-
 for _, server_name in pairs({
   "bashls",
+  "buf_ls",
   "clangd",
   "dockerls",
   "eslint",
@@ -33,7 +32,6 @@ for _, server_name in pairs({
   "jsonls",
   "marksman",
   "nil_ls",
-  "pbls",
   "pyright",
   "ts_ls",
   "yamlls",

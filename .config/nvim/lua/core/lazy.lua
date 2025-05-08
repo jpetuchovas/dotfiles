@@ -35,12 +35,6 @@ local plugins = {
 
   -- LSP Support.
   "neovim/nvim-lspconfig",
-  {
-    "williamboman/mason.nvim",
-    build = function()
-      pcall(vim.cmd, "MasonUpdate")
-    end,
-  },
   "j-hui/fidget.nvim",
 
   -- Autocompletion.
