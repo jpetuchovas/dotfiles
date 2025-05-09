@@ -28,6 +28,7 @@ nmap <leader>f <Action>(ShowReformatFileDialog)
 vmap <leader>f <Action>(ReformatCode)
 
 nmap grn <Action>(RenameElement)
+nmap grr <Action>(FindUsages)
 imap <C-s> <Action>(ParameterInfo)
 
 nmap <leader>zz <Action>(ToggleDistractionFreeMode)
