@@ -3,7 +3,7 @@
 # Choose Script Editor alert style to be "Alerts" so that the banner stays
 # on the screen until dismissed. Also, uncheck "Show in Notification Center".
 date +%H:%M:%S
+date -v +"$1"M +%H:%M:%S
 sleep $(echo "$1 * 60" | bc)
 osascript -e 'display notification "'"$1 min"'" with title "Passed"'
 afplay /System/Library/Sounds/Purr.aiff
-date +%H:%M:%S
