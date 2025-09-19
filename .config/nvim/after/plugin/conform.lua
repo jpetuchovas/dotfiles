@@ -7,6 +7,7 @@ conform.setup({
       "isort",
       "black",
     },
+    typescript = { "prettier" },
   },
   format_on_save = {
     timeout_ms = 5000,
