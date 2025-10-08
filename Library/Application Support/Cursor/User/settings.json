@@ -1,5 +1,5 @@
 {
-    "window.commandCenter": true,
-    "editor.fontSize": 18,
-    "files.insertFinalNewline": true
+  "window.commandCenter": true,
+  "files.insertFinalNewline": true,
+  "window.zoomLevel": 1.5
 }
