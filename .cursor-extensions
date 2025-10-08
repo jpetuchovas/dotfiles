@@ -1,0 +1,5 @@
+cursor --install-extension esbenp.prettier-vscode
+cursor --install-extension redhat.vscode-xml
+cursor --install-extension scala-lang.scala
+cursor --install-extension vscodevim.vim
+cursor --install-extension zxh404.vscode-proto3

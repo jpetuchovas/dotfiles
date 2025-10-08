@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+cursor --list-extensions | xargs -L 1 echo cursor --install-extension > ~/.cursor-extensions

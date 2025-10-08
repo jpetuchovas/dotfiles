@@ -13,6 +13,7 @@ git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME checkout
 exec $SHELL
 dotfiles config --local status.showUntrackedFiles no
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+sh .cursor-extensions
 ```
 
 The `dotfiles` alias can be used to interact with the dotfiles repository.
