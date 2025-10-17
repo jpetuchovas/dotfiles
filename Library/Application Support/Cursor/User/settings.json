@@ -1,4 +1,6 @@
 {
   "files.insertFinalNewline": true,
-  "window.zoomLevel": 1.5
+  "window.zoomLevel": 1.5,
+  "editor.lineNumbers": "relative",
+  "editor.cursorBlinking": "solid"
 }
