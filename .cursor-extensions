@@ -1,4 +1,7 @@
+cursor --install-extension anysphere.cursorpyright
 cursor --install-extension esbenp.prettier-vscode
+cursor --install-extension ms-python.debugpy
+cursor --install-extension ms-python.python
 cursor --install-extension redhat.vscode-xml
 cursor --install-extension scala-lang.scala
 cursor --install-extension vscodevim.vim
