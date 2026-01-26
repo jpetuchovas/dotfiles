@@ -1,53 +1,94 @@
 {
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.zeroUnits": "warning",
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "solid",
   "editor.cursorSurroundingLines": 2,
   "editor.lineNumbers": "relative",
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "git.blame.editorDecoration.enabled": false,
   "vim.leader": " ",
   "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "d"],
-      "after": ["\"", "_", "d"]
+      "after": ["\"", "_", "d"],
     },
     {
       "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y"]
+      "after": ["\"", "+", "y"],
     },
     {
       "before": ["<leader>", "Y"],
-      "after": ["\"", "+", "Y"]
+      "after": ["\"", "+", "Y"],
     },
     {
       "before": ["<leader>", "f"],
-      "commands": ["editor.action.formatDocument"]
+      "commands": ["editor.action.formatDocument"],
     },
     {
       "before": ["g", "r", "n"],
-      "commands": ["editor.action.rename"]
+      "commands": ["editor.action.rename"],
     },
     {
       "before": ["g", "r", "r"],
-      "commands": ["editor.action.goToReferences"]
-    }
+      "commands": ["editor.action.goToReferences"],
+    },
   ],
   "vim.visualModeKeyBindings": [
     {
       "before": ["<leader>", "P"],
-      "after": ["\"", "_", "d", "P"]
+      "after": ["\"", "_", "d", "P"],
     },
     {
       "before": ["<leader>", "d"],
-      "after": ["\"", "_", "d"]
+      "after": ["\"", "_", "d"],
     },
     {
       "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y"]
+      "after": ["\"", "+", "y"],
     },
     {
       "before": ["<leader>", "f"],
-      "commands": ["editor.action.formatSelection"]
-    }
+      "commands": ["editor.action.formatSelection"],
+    },
   ],
-  "window.zoomLevel": 1.5
+  "window.zoomLevel": 1.5,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[markdown]": {
+    "editor.tabSize": 4,
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+    },
+    "editor.formatOnSave": true,
+    "editor.rulers": [72, 88],
+    "editor.tabSize": 4,
+  },
+  "[scala]": {
+    "editor.formatOnSave": true,
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
 }
