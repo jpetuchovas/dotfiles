@@ -6,12 +6,12 @@
 
 # Editors
 .bloop
+.cursor
 .devcontainer
 .idea
 *.iml
 .ijwb
 .metals
-.cursor
 
 # Code analysis
 .mypy_cache
