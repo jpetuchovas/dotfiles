@@ -6,6 +6,7 @@
 
 # Editors
 .bloop
+.claude
 .cursor
 .devcontainer
 .idea
