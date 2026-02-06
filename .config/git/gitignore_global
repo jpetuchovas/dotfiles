@@ -15,6 +15,7 @@
 .ijwb
 .metals
 .vscode
+.wixbazel
 
 # Code analysis
 .mypy_cache
