@@ -1,3 +1,10 @@
+# Dotfiles-repo-only overrides of ~/.config/git/gitignore_global.
+# Git never reads .gitignore files above a repo's root, so this file applies
+# solely to the repo rooted at ~ (the dotfiles bare repo).
+
+# Re-include .claude/settings.json, keep the rest of .claude ignored.
+# The directory must be re-included first: git prunes excluded directories
+# without descending, so a file inside one can never be re-included directly.
 !/.claude/
 /.claude/*
 !/.claude/settings.json
