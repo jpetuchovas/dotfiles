@@ -5,5 +5,7 @@ font-feature = -calt, -liga, -dlig
 font-size = 20
 font-style = Medium
 font-style-italic = Medium Italic
+font-thicken = true
+font-thicken-strength = 0
 macos-option-as-alt = true
 theme = Gruvbox Material Dark
