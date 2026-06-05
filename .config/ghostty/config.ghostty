@@ -1,0 +1,9 @@
+command = zsh -l -c "tmux new-session -A -s 0"
+confirm-close-surface = false
+font-family = JetBrains Mono
+font-size = 20
+font-style = Medium
+font-style-italic = Medium Italic
+font-thicken = true
+macos-option-as-alt = true
+theme = Gruvbox Material Dark
