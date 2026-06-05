@@ -4,6 +4,5 @@ font-family = JetBrains Mono
 font-size = 20
 font-style = Medium
 font-style-italic = Medium Italic
-font-thicken = true
 macos-option-as-alt = true
 theme = Gruvbox Material Dark
