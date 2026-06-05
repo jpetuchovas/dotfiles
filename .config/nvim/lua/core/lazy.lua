@@ -25,8 +25,6 @@ local plugins = {
 
   "mbbill/undotree",
 
-  "numToStr/Comment.nvim",
-
   "tpope/vim-fugitive",
   "lewis6991/gitsigns.nvim",
 
