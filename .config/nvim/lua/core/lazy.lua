@@ -21,7 +21,11 @@ local plugins = {
     build = "make",
     cond = vim.fn.executable("make") == 1,
   },
-  "ThePrimeagen/harpoon",
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 
   "mbbill/undotree",
 
