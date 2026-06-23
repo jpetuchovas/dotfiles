@@ -12,7 +12,7 @@
     "lua-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true
   },
+  "feedbackSurveyRate": 0,
   "effortLevel": "xhigh",
-  "skipAutoPermissionPrompt": true,
-  "feedbackSurveyRate": 0
+  "tui": "fullscreen"
 }
