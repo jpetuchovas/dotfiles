@@ -14,5 +14,6 @@
   },
   "feedbackSurveyRate": 0,
   "effortLevel": "xhigh",
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "theme": "auto"
 }
