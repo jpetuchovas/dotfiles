@@ -15,8 +15,5 @@
   "feedbackSurveyRate": 0,
   "effortLevel": "xhigh",
   "tui": "fullscreen",
-  "theme": "auto",
-  "env": {
-    "CLAUDE_CODE_EFFORT_LEVEL": "max"
-  }
+  "theme": "auto"
 }
